@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  db:
+    image: mongo:4.0.16-xenial
+    volumes:
+      - portfolio:/data/db
+    environment:
+      - DB_URL=mongodb://db/portfolio
+    ports:
+      - "27017:27017"
+
+  django:
+    platform: linux/x86_64
+    build: .
+    entrypoint: ["bash", "./bin/docker_entrypoint", "db"]
+    hostname: portfolio
+    container_name: portfolio
+    command: runserver 0.0.0.0:8000
+    environment:
+      - DOCKER=true
+      - PYTHONPATH=/portfolio
+      - PGHOST=db
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+    volumes:
+      - .:/portfolio
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+
+volumes:
+  portfolio:
