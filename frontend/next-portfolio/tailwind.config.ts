@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'black-pearl': '#08192E',
+        'big-stone': '#122439',
+        'flord': '#607187',
+        'cadet-blue': '#B9C5D4',
+        'bismark': '#5F97A7',
+      },
+      gradientColorStopPositions: {
+        33: '33%',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
