@@ -7,7 +7,7 @@ const NavBar = () => {
   const [navBar, setNavBar] = useState<boolean>(false);
   return (
     <>
-      <nav className="w-full bg-blue-950 fixed top-0 left-0 right-0 z-10">
+      <nav className="w-full bg-black-pearl fixed top-0 left-0 right-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7x1 md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-betweenpy-3 md:py-5 md:block">
@@ -43,27 +43,27 @@ const NavBar = () => {
               <ul className="h-screen md:h-auto items-center justify-center md:flex">
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
                   <Link href="#about" onClick={() => setNavBar(false)}>
-                    About
+                    <span className="text-bismark">01.</span> <span className="text-cadet-blue">About</span>
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
                   <Link href="#previous-jobs" onClick={() => setNavBar(false)}>
-                    Experience
+                    <span className="text-bismark">02.</span> <span className="text-cadet-blue">Experience</span>
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
                   <Link href="#personal-projects" onClick={() => setNavBar(false)}>
-                    Work
+                    <span className="text-bismark">03.</span> <span className="text-cadet-blue">Work</span>
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
                   <Link href="#previous-client-work" onClick={() => setNavBar(false)}>
-                    Clients
+                    <span className="text-bismark">04.</span> <span className="text-cadet-blue">Clients</span>
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
                   <Link href="#contact-me" onClick={() => setNavBar(false)}>
-                    Contact
+                    <span className="text-bismark">05.</span> <span className="text-cadet-blue">Contact</span>
                   </Link>
                 </li>
               </ul>
