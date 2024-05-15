@@ -14,7 +14,7 @@ const NavBar = () => {
               <Link href="/">
                 <h2 className="text-2x1 text-cyan-600 font-bold">LOGO</h2>
               </Link>
-              <div className="md:hidden">
+              <div className="md:hidden ml-auto">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400"
                   onClick={() => setNavBar(!navBar)}
@@ -27,7 +27,7 @@ const NavBar = () => {
                         width={30}
                         height={30}
                         alt="logo"
-                        className="focus:border-none active:border-none"
+                        className="focus:border-none active:border-none text-bismark"
                       />
                     )}
                   </button>
