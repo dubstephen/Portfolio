@@ -15,9 +15,6 @@ const config: Config = {
         'cadet-blue': '#B9C5D4',
         'bismark': '#5F97A7',
       },
-      gradientColorStopPositions: {
-        33: '33%',
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
