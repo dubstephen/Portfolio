@@ -4,7 +4,7 @@ import './ContactMe.css'
 const ContactMe = () => {
   return (
     <>
-      <section id='contact-me' className='text-black h-screen bg-white text-center contact-me'>
+      <section id='contact-me' className='text-white bg-big-stone top-0 justify-center md:justify-start md:text-left flex contact-me'>
         <h1>Contact Me</h1>
       </section>
     </>
