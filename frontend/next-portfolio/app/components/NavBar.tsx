@@ -5,12 +5,34 @@ import { useState } from "react";
 
 const NavBar = () => {
   const [navBar, setNavBar] = useState<boolean>(false);
+  const navOptions: NavOption[] = [
+    {
+      title: 'About',
+      link: '#about'
+    },
+    {
+      title: 'Experience',
+      link: '#previous-jobs'
+    },
+    // {
+    //   title: 'Work',
+    //   link: '#personal-projects'
+    // },
+    {
+      title: 'Clients',
+      link: '#previous-client-work'
+    },
+    {
+      title: 'Contact',
+      link: '#contact-me'
+    },
+]
   return (
     <>
       <nav className="w-full bg-black-pearl fixed top-0 left-0 right-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7x1 md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-betweenpy-3 md:py-5 md:block">
+            <div>
               <Link href="/">
                 <h2 className="text-2x1 text-cyan-600 font-bold">LOGO</h2>
               </Link>
@@ -41,31 +63,16 @@ const NavBar = () => {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
-                  <Link href="#about" onClick={() => setNavBar(false)}>
-                    <span className="text-bismark">01.</span> <span className="text-cadet-blue">About</span>
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
-                  <Link href="#previous-jobs" onClick={() => setNavBar(false)}>
-                    <span className="text-bismark">02.</span> <span className="text-cadet-blue">Experience</span>
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
-                  <Link href="#personal-projects" onClick={() => setNavBar(false)}>
-                    <span className="text-bismark">03.</span> <span className="text-cadet-blue">Work</span>
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
-                  <Link href="#previous-client-work" onClick={() => setNavBar(false)}>
-                    <span className="text-bismark">04.</span> <span className="text-cadet-blue">Clients</span>
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
-                  <Link href="#contact-me" onClick={() => setNavBar(false)}>
-                    <span className="text-bismark">05.</span> <span className="text-cadet-blue">Contact</span>
-                  </Link>
-                </li>
+              { navOptions.map((option, index) => {
+                index = index + 1;
+                return (
+                  <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-blue-950">
+                    <Link href={option.link} onClick={() => setNavBar(false)}>
+                      <span className="text-bismark">0{index}.</span> <span className="text-cadet-blue">{option.title}</span>
+                    </Link>
+                  </li>
+                )
+              })}
               </ul>
             </div>
           </div>
