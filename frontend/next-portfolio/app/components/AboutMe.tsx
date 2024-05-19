@@ -115,15 +115,21 @@ const technologiesRow3: Technology[] = [
                       )
                     })}
                   </div>
-                )
-              })}
+                  <div className="">
+                    { technologiesRow3.map((tech) => {
+                      return (
+                        <TechRow tech={tech} />
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='flex-col pt-4 pl-8'>
+              <Image className='hidden xl:inline' src={'/Prof-Headshot.jpg'} width={300} height={300} alt="logo" />
             </div>
           </div>
         </div>
-        <div className="w-1/4 h-12">
-          <Image className='pt-24' src={'/Profile Pic.jpg'} width={250} height={250} alt="logo" />
-        </div>
-      </div>
       </section>
     </>
   )
