@@ -68,7 +68,7 @@ const technologiesRow3: Technology[] = [
           </h3>
           <div className='flex'>
             <div className='flex-col'>
-              <Image className='inline xl:hidden mt-8 rounded-md' src={'/Prof-Headshot.jpg'} width={300} height={300} alt="logo" />
+              <Image className='inline xl:hidden mt-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 hero-description text-cadet-blue md:text-flord text-lg md:text-xl '>
                   Hello! My name is Stephen and I enjoy creating things that live<br/>
