@@ -57,18 +57,18 @@ const technologiesRow3: Technology[] = [
 ]
   return (
     <>
-      <section id='about' className='text-white bg-big-stone justify-center md:justify-start md:text-left flex about'>
-        <div className="pl-8 pr-8 md:ml-auto md:mr-auto md:mb-64 mt-32 md:mt-64">
+      <section id='about' className='text-white bg-big-stone justify-center md:text-left flex about'>
+        <div className="ml-8 mr-8 md:mb-64 mt-32 md:mt-64">
           <h3>
             <div className="flex items-center w-full">
               <span className="text-bismark text-xl md:text-2xl pr-2">01.</span>
               <span className="text-cadet-blue text-xl md:text-2xl">About Me</span>
-              <hr className="w-40 md:w-64 h-0.5 ml-2 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+              <hr className="w-40 md:w-96 h-0.5 ml-2 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
             </div>
           </h3>
-          <div className='flex'>
-            <div className='flex-col'>
-              <Image className='inline xl:hidden mt-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
+          <div className='flex justify-center'>
+            <div className='flex-col '>
+              <Image className='xl:hidden mx-auto mt-8 mb-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 hero-description text-cadet-blue md:text-flord text-lg md:text-xl '>
                   Hello! My name is Stephen and I enjoy creating things that live<br/>
@@ -125,8 +125,8 @@ const technologiesRow3: Technology[] = [
                 </div>
               </div>
             </div>
-            <div className='flex-col pt-4 pl-8'>
-              <Image className='hidden xl:inline' src={'/Prof-Headshot.jpg'} width={300} height={300} alt="logo" />
+            <div className='hidden xl:inline flex-col pt-4 pl-8'>
+              <Image src={'/Prof-Headshot.jpg'} width={300} height={300} alt="logo" />
             </div>
           </div>
         </div>
