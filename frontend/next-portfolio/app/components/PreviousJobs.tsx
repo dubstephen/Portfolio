@@ -1,5 +1,6 @@
 import React from 'react'
 import './PreviousJobs.css'
+import LORModal from './LORModal'
 
 const PreviousJobs = () => {
   return (
