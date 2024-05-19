@@ -46,14 +46,14 @@ const PreviousClientWork = () => {
               <span className="text-cadet-blue text-2xl">Previous Client Work</span>
             </div>
           </h3>
-            <ul className="flex flex-row items-center justify-center gap-4 pt-8 md:pt-16 md:ml-auto flex-wrap">
-              {clientCardRow1.map((client: ClientCard) => (
-                    <ClientCard client={client} />
-              ))}
-              {clientCardRow2.map((client: ClientCard) => (
-                    <ClientCard client={client} />
-              ))}
-            </ul>
+          <ul className="flex flex-row items-center justify-center gap-4 pt-8 md:pt-16 md:ml-auto flex-wrap">
+            {clientCardRow1.map((client: ClientCard) => (
+                  <ClientCard client={client} />
+            ))}
+            {clientCardRow2.map((client: ClientCard) => (
+                  <ClientCard client={client} />
+            ))}
+          </ul>
         </div>
       </section>
     </>
