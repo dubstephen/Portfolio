@@ -1,30 +1,31 @@
 import React from 'react'
 import Image from "next/image";
 import './AboutMe.css'
+import TechRow from './TechRow';
 
 const AboutMeSection = () => {
-  const tecknologiesCol1: Technology[] = [
-    {
-      title: 'Next.js',
-      imageSRC: '/next-js-seeklogo.svg',
-      link: 'https://nextjs.org/'
-    },
-    {
-      title: 'Django',
-      imageSRC: '/djangoproject.svg',
-      link: 'https://www.djangoproject.com/'
-    },
-    {
-      title: 'Tailwind',
-      imageSRC: '/Tailwind_CSS_Logo.svg',
-      link: 'https://tailwindcss.com/'
-    }
-]
-const tecknologiesCol2: Technology[] = [
+const technologiesRow1: Technology[] = [
+  {
+    title: 'Next.js',
+    imageSRC: '/next-js-seeklogo.svg',
+    link: 'https://nextjs.org/'
+  },
   {
     title: 'TypeScript',
     imageSRC: '/typescript.svg',
     link: 'https://www.typescriptlang.org/'
+  },
+  {
+    title: 'Tailwind',
+    imageSRC: '/Tailwind_CSS_Logo.svg',
+    link: 'https://tailwindcss.com/'
+  },
+]
+const technologiesRow2: Technology[] = [
+  {
+    title: 'Django',
+    imageSRC: '/djangoproject.svg',
+    link: 'https://www.djangoproject.com/'
   },
   {
     title: 'Python',
@@ -35,6 +36,23 @@ const tecknologiesCol2: Technology[] = [
     title: 'Lua',
     imageSRC: '/lua-icon.svg',
     link: 'https://www.lua.org/'
+  },
+]
+const technologiesRow3: Technology[] = [
+  {
+    title: '.NET',
+    imageSRC: '/Microsoft_.NET_logo.svg',
+    link: 'https://dotnet.microsoft.com/en-us/'
+  },
+  {
+    title: 'C#',
+    imageSRC: '/Logo_C_sharp.svg',
+    link: 'https://dotnet.microsoft.com/en-us/languages/csharp'
+  },
+  {
+    title: 'Ionic',
+    imageSRC: '/ionicframework-icon.svg',
+    link: 'https://ionicframework.com/'
   }
 ]
   return (
