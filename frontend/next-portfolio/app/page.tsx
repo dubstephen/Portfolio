@@ -10,7 +10,7 @@ import NavBar from './components/NavBar'
 
 export default function Home() {
   return (
-    <main>
+    <main className='h-fit'>
       <NavBar />
       <HeroSection />
       <AboutMe />
