@@ -108,17 +108,12 @@ const technologiesRow3: Technology[] = [
                       )
                     })}
                   </div>
-                )
-              })}
-            </div>
-            <div className="pl-16 pr-32 h-24">
-              { tecknologiesCol2.map((tech) => {
-                return (
-                  <div className='pb-16'>
-                    <a href={tech.link}>
-                      <Image className='inline' src={tech.imageSRC} width={24} height={24} alt="logo" />
-                    </a>
-                    <span className='text-cadet-blue pl-4'>{tech.title}</span>
+                  <div className="">
+                    { technologiesRow2.map((tech) => {
+                      return (
+                        <TechRow tech={tech} />
+                      )
+                    })}
                   </div>
                 )
               })}
