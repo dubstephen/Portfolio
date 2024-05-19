@@ -1,5 +1,6 @@
 import React from 'react'
 import './PreviousClientWork.css'
+import ClientCard from './ClientCard'
 
 const PreviousClientWork = () => {
   const clientCardRow1: ClientCard[] = [
@@ -38,8 +39,22 @@ const PreviousClientWork = () => {
   ]
   return (
     <>
-      <section id='previous-client-work' className='text-white h-screen bg-big-stone text-center previous-client-work'>
-        <h1>Previous Client Work</h1>
+      <section id='previous-client-work' className='text-white bg-big-stone flex previous-client-work'>
+        <div className="ml-8 mr-8 md:mb-64 mt-32 md:mt-64">
+          <h3>
+            <div className="flex w-full ml-auto items-center justify-center">
+              <span className="text-cadet-blue text-2xl">Previous Client Work</span>
+            </div>
+          </h3>
+            <ul className="flex flex-row items-center justify-center gap-4 pt-8 md:pt-16 md:ml-auto flex-wrap">
+              {clientCardRow1.map((client: ClientCard) => (
+                    <ClientCard client={client} />
+              ))}
+              {clientCardRow2.map((client: ClientCard) => (
+                    <ClientCard client={client} />
+              ))}
+            </ul>
+        </div>
       </section>
     </>
   )
