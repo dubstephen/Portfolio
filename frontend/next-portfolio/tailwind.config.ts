@@ -1,4 +1,5 @@
 import {nextui} from '@nextui-org/theme';
+import { before } from 'node:test';
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -9,15 +10,101 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/components/(button|modal|ripple|spinner).js"
   ],
   theme: {
+    fontFamily: {
+      'mono': ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
+    },
     extend: {
+      animation: {
+        typing: 'typing 0.5s steps(30), blink 1s infinite',
+        fadeIn1: 'fadeIn1 2s ease-in-out',
+        fadeIn2: 'fadeIn2 2s ease-in-out',
+        fadeIn3: 'fadeIn3 2s ease-in-out',
+        fadeIn4: 'fadeIn4 2s ease-in-out',
+        buttonFadeIn: 'buttonFadeIn 2s ease-in-out',
+        buttonXFadeIn: 'buttonXFadeIn 2s ease-in-out forwards',
+        borderXFadeIn1: 'borderXFadeIn1 2s ease-in-out forwards',
+        buttonYFadeIn: 'buttonYFadeIn 2s ease-in-out forwards',
+        borderYFadeIn1: 'borderYFadeIn1 2s ease-in-out forwards',
+        borderYFadeIn2: 'borderYFadeIn2 2s ease-in-out forwards'
+      },
+      keyframes: theme => ({
+        fadeIn1: {
+          '0%': { color: 'transparent' },
+          '20%': { color: 'transparent' },
+          '100%': { color: 'flord' },
+        },
+        fadeIn2: {
+          '0%': { color: 'transparent' },
+          '40%': { color: 'transparent' },
+          '100%': { color: 'flord' },
+        },
+        fadeIn3: {
+          '0%': { color: 'transparent' },
+          '50%': { color: 'transparent' },
+          '100%': { color: 'flord' },
+        },
+        fadeIn4: {
+          '0%': { color: 'transparent' },
+          '75%': { color: 'transparent' },
+          '100%': { color: 'flord' },
+        },
+        buttonFadeIn: {
+          '0%': { color: 'transparent', borderWidth: '0' },
+          '75%': { color: 'transparent', borderWidth: '0' },
+          '100%': { color: 'flord', borderWidth: '1' },
+        },
+        buttonXFadeIn: {
+          '0%': { width: '0' },
+          '65%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        borderXFadeIn1: {
+          '0%': { width: '0' },
+          '65%': { width: '0' },
+          '100%': { width: '10rem' },
+        },
+        buttonYFadeIn: {
+          '0%': { height: '0' },
+          '65%': { height: '0' },
+          '100%': { height: '100%' },
+        },
+        borderYFadeIn1: {
+          '0%': { height: '0' },
+          '65%': { height: '0' },
+          '100%': { height: '26rem' },
+        },
+        borderYFadeIn2: {
+          '0%': { height: '0' },
+          '65%': { height: '0' },
+          '100%': { height: '24rem' },
+        },
+        typing: {
+          from: {
+            width: '0'
+          },
+          to: {
+            width: '20ch'
+          },
+        },
+        blink: {
+          from: {
+            'background-color': 'transparent'
+          },
+          to: {
+            'backgroun-color': 'bismark'
+          },
+        },
+      }),
       colors: {
-        'big-stone': '#122439',
-        'bismark': '#5F97A7',
+        'big-stone': '#0a192f',
+        'bismark': '#64ffda',
+        'other-blue': '#77BAAA',
         'black-pearl': '#08192E',
         'blue-Dianne': '#244B56',
-        'blue-Zodiac': '#102F54',
+        'blue-Zodiac': '#112240',
         'cadet-blue': '#B9C5D4',
-        'flord': '#607187',
+        'flord': '#8892b0',
+        'some-red': '#840000'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
