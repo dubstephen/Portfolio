@@ -8,7 +8,7 @@ export default function LORModal() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   return (
     <>
-      <Button className='mt-8  md:p-2 hero-description text-big-stone bg-bismark rounded-md text-lg md:text-xl ' onClick={onOpen}>See What They Said</Button>
+      <Button className='mt-8 md:p-8 border-1 border-bismark hero-description text-bismark bg-opacity-0 hover:transition-all duration-75 hover:-translate-y-1 hover:-translate-x-1 ease-in rounded-md text-lg md:text-xl lor-button' onClick={onOpen}>See What They Said</Button>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement='center' size="3xl">
         <ModalContent className="overflow-scroll m-4 modal-content">
           {(onClose) => (
@@ -65,7 +65,7 @@ export default function LORModal() {
                 </div>
               </ModalBody>
               <ModalFooter>
-                <Button className="text-cadet-blue bg-black-pearl rounded-md" onClick={onClose}>
+                <Button className="text-some-red border-1 border-some-red hover:bg-opacity-100 hover:text-white hover:bg-some-red bg-opacity-0 rounded-md" onClick={onClose}>
                   Close
                 </Button>
               </ModalFooter>
