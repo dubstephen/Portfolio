@@ -9,9 +9,8 @@ const ClientCardComponent = (props: Props) => {
   const [hovered, setHovered] = useState<boolean>(false);
   const { client } = props;
   return (
-    <li
-        key={'client-card-'+client.id}
-        className="card shadow-xl col-span-1 h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200"
+    <li key={'client-card-'+client.id}
+        className="flex flex-col md:justify-between card shadow-xl col-span-1 md:h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -26,9 +25,9 @@ const ClientCardComponent = (props: Props) => {
           <p className='text-cadet-blue text-base'>{client.description}</p>
       </div>
       { client.link &&
-        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline px-6">See More</a>
+        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline ml-6 w-20">See More</a>
       }
-      <div className="px-6 py-4 text-start pt-auto bottom-0">
+      <div className="px-6 py-4 align-bottom pt-auto mb-0">
         { client.technologies.map((tech, index) => {
           return (
             <span key={'client-'+client.id+'-tech-'+index} className="inline-block bg-black-pearl rounded-full px-3 py-1 text-sm font-semibold text-cadet-blue mr-2 mb-2">#{tech}</span>

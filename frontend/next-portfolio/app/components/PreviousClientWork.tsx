@@ -7,11 +7,11 @@ import { useIsVisible } from '../helpers'
 const clientCardRow1: ClientCard[] = [
   {
     id: '1',
-    title: 'International Composting Facilities',
-    description: 'Strategized with a small team of engineers to build software used for monitoring \
-    and automating various processes revolving around composting while adhering to environmental regulations.',
-    link: 'https://cypressmill.co/project-showcase/green-mountain-technologies/',
-    technologies: ['Lua', 'React', 'JS', 'Controllers', 'IoT'],
+    title: 'Case Management Platform',
+    description: 'Built out new features for an online case management tool used for reducing waste \
+    and helping organizations accurately allocate their funds to those in need.',
+    link: 'https://cypressmill.co/project-showcase/simon-solutions/',
+    technologies: ['Django', 'Python', 'Python Templates'],
   },
   {
     id: '2',
@@ -24,11 +24,11 @@ const clientCardRow1: ClientCard[] = [
   },
   {
     id: '3',
-    title: 'Case Management Platform',
-    description: 'Built out new features for an online case management tool used for reducing waste \
-    and helping organizations accurately allocate their funds to those in need.',
-    link: 'https://cypressmill.co/project-showcase/simon-solutions/',
-    technologies: ['Django', 'Python', 'Python Templates'],
+    title: 'International Composting Facilities',
+    description: 'Strategized with a small team of engineers to build software used for monitoring \
+    and automating various processes revolving around composting while adhering to environmental regulations.',
+    link: 'https://cypressmill.co/project-showcase/green-mountain-technologies/',
+    technologies: ['Controllers', 'React', 'Lua', 'JS', 'IoT'],
   },
 ]
 const clientCardRow2: ClientCard[] = [

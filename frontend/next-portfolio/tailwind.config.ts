@@ -16,12 +16,14 @@ const config: Config = {
     extend: {
       animation: {
         typing: 'typing 0.5s steps(30), blink 1s infinite',
+        typing2: 'typing2 3s steps(50)',
         fadeIn1: 'fadeIn1 2s ease-in-out',
         fadeIn2: 'fadeIn2 2s ease-in-out',
-        fadeIn3: 'fadeIn3 2s ease-in-out',
-        fadeIn4: 'fadeIn4 2s ease-in-out',
+        fadeIn3: 'fadeIn3 3s ease-in-out',
+        fadeIn4: 'fadeIn4 3s ease-in-out',
         buttonFadeIn: 'buttonFadeIn 2s ease-in-out',
         buttonXFadeIn: 'buttonXFadeIn 2s ease-in-out forwards',
+        borderXFadeIn: 'borderXFadeIn 3s ease-in-out forwards',
         borderXFadeIn1: 'borderXFadeIn1 2s ease-in-out forwards',
         buttonYFadeIn: 'buttonYFadeIn 2s ease-in-out forwards',
         borderYFadeIn1: 'borderYFadeIn1 2s ease-in-out forwards',
@@ -40,7 +42,7 @@ const config: Config = {
         },
         fadeIn3: {
           '0%': { color: 'transparent' },
-          '50%': { color: 'transparent' },
+          '60%': { color: 'transparent' },
           '100%': { color: 'flord' },
         },
         fadeIn4: {
@@ -58,6 +60,11 @@ const config: Config = {
           '65%': { width: '0' },
           '100%': { width: '100%' },
         },
+        borderXFadeIn: {
+          '0%': { width: '0' },
+          '65%': { width: '0' },
+          '100%': { width: '100%' },
+        },
         borderXFadeIn1: {
           '0%': { width: '0' },
           '65%': { width: '0' },
@@ -71,7 +78,7 @@ const config: Config = {
         borderYFadeIn1: {
           '0%': { height: '0' },
           '65%': { height: '0' },
-          '100%': { height: '26rem' },
+          '100%': { height: '9.3rem' },
         },
         borderYFadeIn2: {
           '0%': { height: '0' },
@@ -85,6 +92,11 @@ const config: Config = {
           to: {
             width: '20ch'
           },
+        },
+        typing2: {
+          '0%': { width: '0', color: 'transparent' },
+          '50%': { width: '0', color: 'transparent' },
+          '100%': { width: '40ch' },
         },
         blink: {
           from: {

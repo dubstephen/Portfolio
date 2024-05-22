@@ -19,7 +19,7 @@ const PreviousJobs = () => {
             <div className="flex items-center w-full">
               <span className="text-bismark text-xl md:text-2xl pr-2">02.</span>
               <span className="text-cadet-blue text-xl md:text-2xl">Previous Jobs</span>
-              <hr className="w-24 md:w-64 h-0.5 ml-2 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+              <hr className="w-24 md:w-64 h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
             </div>
           </h3>
           <h4>
@@ -44,10 +44,10 @@ const PreviousJobs = () => {
             </div>
             <div className="text-flord text-sm ml-6">April 2020 - April 2024</div>
           </h4>
-          <div ref={ref} className="flex justify-start items-center w-full pt-6 ml-6">
+          <div ref={ref} className="flex justify-start items-center w-full pt-6 md:ml-6">
             <div className="h-24">
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 hero-description text-bismark text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
                   {'>'}<br/>
                   <br/>
                   <span className='md:hidden'>
@@ -57,7 +57,7 @@ const PreviousJobs = () => {
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 hero-description text-bismark text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
                   {'>'}<br/>
                   <br/>
                   <br/>
@@ -68,27 +68,27 @@ const PreviousJobs = () => {
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 hero-description text-bismark text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
                   {'>'}<br/>
                 </p>
               </div>
             </div>
             <div className="pl-2 h-24">
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 hero-description text-cadet-blue text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
                   Write modern, performant, maintainable code for a diverse<br/>
                   array of client and internal projects
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 hero-description text-cadet-blue text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
                   Work with a variety of different languages, platforms, and <br/>
                   frameworks such as JavaScript, TypeScript, React,<br/>
                   Django, Python, .NET, and more!
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 md:pb-12 hero-description text-cadet-blue text-lg md:text-xl '>
+                <p className='pt-8 md:p-2 md:pb-12 text-cadet-blue text-lg md:text-xl '>
                   Communicate with multi-disciplinary teams of engineers<br/>
                   and clients on a daily basis
                 </p>
