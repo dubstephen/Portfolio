@@ -36,10 +36,10 @@ export default function LORModal() {
                   success. 
                 </p>
                 <p>
-                  One of Stephen&apos;'s greatest strengths is his motivation to learn new technologies. He actively
+                  One of Stephen's greatest strengths is his motivation to learn new technologies. He actively
                   seeks out opportunities to expand his skill set and stay updated with the latest developments in
                   the field. His enthusiasm for learning not only benefits him personally but also enhances our
-                  team&apos;'s capabilities as a whole. 
+                  team's capabilities as a whole. 
                 </p>
                 <p>
                   Another notable trait of Stephen is his adaptability and quick learning ability. In the fast-paced
