@@ -1,3 +1,1 @@
-web: | 
-    cd sb-portfolio
-    npm run dev
+web: cd sb-portfolio; npm run dev
