@@ -18,8 +18,8 @@ const PreviousJobs = () => {
         <div className={`pl-8 pr-8 md:ml-auto md:mr-auto previous-jobs md:mb-0 mt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
           <h3>
             <div className="flex items-center w-full">
-              <span className="text-bismark text-xl md:text-2xl pr-2">02.</span>
-              <span className="text-cadet-blue text-xl md:text-2xl">Previous Jobs</span>
+              <span className="text-bismark text-md sm:text-xl md:text-3xl pr-2">02.</span>
+              <span className="text-cadet-blue text-md sm:text-xl md:text-3xl">Previous Jobs</span>
               <hr className="w-24 md:w-64 h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
             </div>
           </h3>

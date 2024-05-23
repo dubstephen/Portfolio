@@ -94,7 +94,7 @@ const AboutMeDescription = () => {
                 Hello, My name is Stephen <br/>and I love building software!
                 My interest in software development started in the early
                 stages of my adult life, but I never thought I would be
-                able to truly pursue it. It wasn not until spring of 2019 that
+                able to truly pursue it. It wasn't not until spring of 2019 that
                 I finally decided to dive in and see what this field had
                 to offer.
               </p>
@@ -123,7 +123,7 @@ const AboutMeDescription = () => {
                 Hello, My name is Stephen and I love building software!<br/>
                 My interest in software development started in the early<br/>
                 stages of my adult life, but I never thought I would be<br/>
-                able to truly pursue it. it wasn not until spring of 2019 that<br/>
+                able to truly pursue it. it wasn't not until spring of 2019 that<br/>
                 I finally decided to dive in and see what this field had<br/>
                 to offer.
               </p>

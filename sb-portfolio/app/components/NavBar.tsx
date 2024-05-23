@@ -34,7 +34,7 @@ const NavBar = () => {
           <div>
             <div className="flex">
               <Link href="/">
-                <h2 className="text-2x1 text-bismark font-bold pt-1">LOGO</h2>
+                <h2 className="text-2x1 text-bismark font-bold pt-1">HOME</h2>
               </Link>
               <div className="md:hidden ml-auto">
                 <button className=" text-gray-700 rounded-md outline-none focus:border-gray-400" onClick={() => setNavBar(!navBar)}>
