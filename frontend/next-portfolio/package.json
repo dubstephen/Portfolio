@@ -1,5 +1,6 @@
 {
   "name": "next-portfolio",
+  "homepage": "https://dubstephen.github.io/Portfolio/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
