@@ -75,6 +75,10 @@ jobs:
         run:   |
             cd frontend/next-portfolio
             ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Make Output Directory
+        run:   |
+            cd frontend/next-portfolio
+            mkdir out
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
