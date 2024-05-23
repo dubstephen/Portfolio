@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "postinstall": "cd sb-portfolio/ && npm install",
+    "start": "cd sb-portfolio/ && npm run dev"
+  }
+}
