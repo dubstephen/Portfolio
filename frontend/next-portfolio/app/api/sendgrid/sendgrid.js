@@ -5,7 +5,7 @@ import sendgrid from "@sendgrid/mail";
 //   // res.status(200).json({status: 'ok'})
 // }
 
-export default (req, res) => {
+export default async (req, res) => {
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
   const myEmail = process.env.MY_EMAIL;
   console.log("**********************************************")
