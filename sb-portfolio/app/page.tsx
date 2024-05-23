@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import HeroSection from './components/HeroSection'
 import AboutMe from './components/AboutMe'
 import PreviousJobs from './components/PreviousJobs'

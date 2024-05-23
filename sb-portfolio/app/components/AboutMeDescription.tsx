@@ -179,7 +179,7 @@ const AboutMeDescription = () => {
           </div>
         </div>
         <div className='hidden xl:inline flex-col pt-4 pl-8'>
-          <Image src={'/Prof-Headshot.jpg'} width={300} height={300} alt="logo" />
+          <Image src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
         </div>
       </div>
     </>
