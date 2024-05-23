@@ -82,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend/next-portfolio/out
+          path: ./frontend/next-portfolio/
 
   # Deployment job
   deploy:
