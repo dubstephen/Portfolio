@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useIsVisible(ref: React.MutableRefObject<Element | undefined>) {
+export function useIsVisible(ref: React.MutableRefObject<Element>) {
     const [isIntersecting, setIntersecting] = useState(false);
   
     useEffect(() => {
