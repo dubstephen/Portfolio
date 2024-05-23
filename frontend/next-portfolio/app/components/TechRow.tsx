@@ -10,7 +10,6 @@ const TechRow = (props: Props) => {
   const [hovered, setHovered] = useState<boolean>(false);
   const { tech } = props;
   return (
-    <div key={'tech-item-'+tech.id} className='pb-16'>
       <a href={tech.link} target="_blank" rel="noopener noreferrer" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
         <Image className='inline ' src={tech.imageSRC} width={40} height={40} alt="logo" />
         { hovered ? 
@@ -19,7 +18,6 @@ const TechRow = (props: Props) => {
           <span className={'text-cadet-blue pl-4 hidden md:inline'}>{tech.title}</span>
         }
       </a>
-    </div>
   );
 }
 

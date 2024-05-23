@@ -59,8 +59,8 @@ const NavBar = () => {
                 { navOptions.map((option, index) => {
                   index = index + 1;
                   return (
-                    <Link href={option.link} scroll={true} onClick={() => setNavBar(false)}>
-                      <li key={'nav-item-'+index} className="pb-6 text-lg text-white py-6 md:py-4 md:px-6 text-center border-b-2 md:border-b-0">
+                    <Link key={'nav-item-'+index} href={option.link} scroll={true} onClick={() => setNavBar(false)}>
+                      <li className="pb-6 text-lg text-white py-6 md:py-4 md:px-6 text-center border-b-2 md:border-b-0">
                           <span className="text-bismark">0{index}.</span> <span className="text-cadet-blue hover:text-bismark">{option.title}</span>
                       </li>
                     </Link>

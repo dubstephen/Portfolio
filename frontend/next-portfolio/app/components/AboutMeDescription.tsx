@@ -151,21 +151,27 @@ const AboutMeDescription = () => {
               <div className="">
                 { technologiesRow1.map((tech) => {
                   return (
-                    <TechRow tech={tech} />
+                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                      <TechRow tech={tech} />
+                    </div>
                   )
                 })}
               </div>
               <div className="">
                 { technologiesRow2.map((tech) => {
                   return (
-                    <TechRow tech={tech} />
+                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                      <TechRow tech={tech} />
+                    </div>
                   )
                 })}
               </div>
               <div className="">
                 { technologiesRow3.map((tech) => {
                   return (
-                    <TechRow tech={tech} />
+                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                      <TechRow tech={tech} />
+                    </div>
                   )
                 })}
               </div>

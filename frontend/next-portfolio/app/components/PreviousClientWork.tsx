@@ -74,10 +74,10 @@ const PreviousClientWork = () => {
           </h3>
           <ul ref={ref} className="flex flex-row items-center justify-center gap-4 mt-8 md:mt-16 md:ml-auto flex-wrap">
             {clientCardRow1.map((client: ClientCard) => (
-                  <ClientCard client={client} />
+                  <ClientCard key={'client-card-'+client.id} client={client} />
             ))}
             {clientCardRow2.map((client: ClientCard) => (
-                  <ClientCard client={client} />
+                  <ClientCard key={'client-card-'+client.id} client={client} />
             ))}
           </ul>
         </div>

@@ -9,8 +9,7 @@ const ClientCardComponent = (props: Props) => {
   const [hovered, setHovered] = useState<boolean>(false);
   const { client } = props;
   return (
-    <li key={'client-card-'+client.id}
-        className="flex flex-col md:justify-between card shadow-xl col-span-1 md:h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200"
+    <li className="flex flex-col md:justify-between card shadow-xl col-span-1 md:h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
