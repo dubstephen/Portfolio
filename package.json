@@ -7,6 +7,6 @@
   },
   "scripts": {
     "postinstall": "cd sb-portfolio/ && npm install",
-    "start": "cd sb-portfolio/ && npm install && npm run dev"
+    "start": "cd sb-portfolio/ &&  npm run start"
   }
 }
