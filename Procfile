@@ -1,1 +1,1 @@
-web: ls sb-portfolio/app/scripts/
+web: node sb-portfolio/app/scripts/heroku-start.js
