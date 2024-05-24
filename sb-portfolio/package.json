@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production webpack --mode production",
+    "start": "next start -p $PORT",
     "lint": "next lint",
     "deploy": "gh-pages -d dis"
   },

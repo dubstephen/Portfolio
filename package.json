@@ -6,7 +6,7 @@
     "npm": "9.5.1"
   },
   "scripts": {
-    "postinstall": "cd sb-portfolio/ && npm install",
-    "start": "cd sb-portfolio/ &&  npm run start"
+    "postinstall": "cd sb-portfolio/ && docker build -t docker-next .",
+    "start": "cd sb-portfolio/ && docker-compose up"
   }
 }
