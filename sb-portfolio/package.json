@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d dis"
+    "lint": "next lint"
   },
   "devDependencies": {
     "@nextui-org/modal": "^2.0.33",
