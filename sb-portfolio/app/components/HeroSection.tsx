@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className='ml-auto mr-auto md:mb-0 mt-32 hero-container'>
           <span className='md:hidden p-2 introduction text-bismark text-base md:text-base font-mono animate-fadeIn1 overflow-hidden inline-block whitespace-nowrap'>Hello!<br/> my name is</span>
           <span className='hidden md:inline-block p-2 introduction text-bismark text-base md:text-base font-mono animate-typing overflow-hidden whitespace-nowrap'>Hi, my name is</span>
-          <h1 className='p-2 md:mt-4 name text-cadet-blue text-4xl md:text-7xl font-bold font-sans animate-fadeIn1'>Stephen Bloodworth.</h1>
+          <h1 className='p-2 md:mt-4 name text-cadet-blue text-4xl md:text-7xl font-bold font-sans animate-fadeIn1'>Stephen <br className='md:hidden'/>Bloodworth.</h1>
           <h2 className='p-2 md:mt-4 what-i-do text-flord text-4xl md:text-7xl font-bold font-sans animate-fadeIn2'>I build software.</h2>
           <span id='modile-hero-details' className='md:hidden'>
             <p className='ml-auto mr-auto w-80 md:w-full pt-8 md:mt-4 md:p-2 text-flord text-lg md:text-xl font-sans animate-fadeIn3'>
