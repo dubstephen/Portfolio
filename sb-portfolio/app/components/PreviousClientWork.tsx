@@ -43,18 +43,18 @@ const clientCardRow2: ClientCard[] = [
   },
   {
     id: '5',
-    title: 'Horse Tracking Application',
-    description: 'A client expressed the desire to create an application for managing horses and their documentation.',
+    title: 'Workorder System',
+    description: 'A client presented the need for a modernized work order system that would automate \
+    processes with QuickBooks. Using the following technologies, my team and I saw the completion of \
+    this project from start to finish.',
     technologies: ['React', 'TS', 'Ionic', 'Django', 'Python'],
   },
   {
     id: '6',
-    title: 'Workorder System',
-    description: 'A client presented the need for a modernized work order system that would automate \
-    system processes with QuickBooks. Using the following technologies, we saw the completion of \
-    this system from start to finish.',
+    title: 'Horse Tracking Application',
+    description: 'A client expressed the desire to create an application for managing horses. This app would keep track of the horse, maintenance records, stables, and more.',
     technologies: ['React', 'TS', 'Ionic', 'Django', 'Python'],
-  },
+  }
 ]
 
 const PreviousClientWork = () => {

@@ -67,6 +67,8 @@ const technologiesRow3: Technology[] = [
 
 const AboutMeDescription = () => {
   const [showSection, setShowSection] = useState<boolean>(false);
+  const [gHHovered, setGHHovered] = useState<boolean>(false);
+  const [lIHovered, setLIHovered] = useState<boolean>(false);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -87,14 +89,22 @@ const AboutMeDescription = () => {
     <>
       <div className={`flex justify-center text transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
         <div className='flex-col font-sans'>
-          <Image className='xl:hidden mx-auto mt-8 mb-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
+          <Image className='xl:hidden mx-auto mt-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
+          <div className='xl:hidden text-center pt-8 mb-0 md:pt-4 md:mb-8'>
+            <a href='https://github.com/dubstephen/' target="_blank" rel="noopener noreferrer">
+              <Image className='inline ' src='/github-mark-white.svg' width={25} height={25} alt="logo" />
+            </a>
+            <a className='pl-4' href='https://www.linkedin.com/in/stephen-bloodworth/' target="_blank" rel="noopener noreferrer">
+              <Image className='inline ' src='/linkedin-svgrepo-com.svg' width={25} height={25} alt="logo" />
+            </a>
+          </div>
           <div id='mobile-about-me-desc' className='md:hidden'>
             <div className="flex items-center justify-start w-full">
               <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
                 Hello, My name is Stephen <br/>and I love building software!
                 My interest in software development started in the early
                 stages of my adult life, but I never thought I would be
-                able to truly pursue it. It wasn't not until spring of 2019 that
+                able to truly pursue it. It was not until spring of 2019 that
                 I finally decided to dive in and see what this field had
                 to offer.
               </p>
@@ -103,10 +113,10 @@ const AboutMeDescription = () => {
               <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
                 I spent the next year learning everything I could in order
                 to launch my new career off the ground. I managed to
-                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software consulting firm </a>
+                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software consulting firm</a>{' '}
                 based out of Florence, AL. They took
-                me on and trained me on everything from front to
-                back.
+                me in and trained me on everything from front to
+                back and beyond.
               </p>
             </div>
             <div className="flex items-center justify-start w-full">
@@ -123,7 +133,7 @@ const AboutMeDescription = () => {
                 Hello, My name is Stephen and I love building software!<br/>
                 My interest in software development started in the early<br/>
                 stages of my adult life, but I never thought I would be<br/>
-                able to truly pursue it. it wasn't not until spring of 2019 that<br/>
+                able to truly pursue it. It was not until spring of 2019 that<br/>
                 I finally decided to dive in and see what this field had<br/>
                 to offer.
               </p>
@@ -132,10 +142,10 @@ const AboutMeDescription = () => {
               <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
                 I spent the next year learning everything I could in order<br/>
                 to launch my new career off the ground. I managed to<br/>
-                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software<br/> consulting firm </a>
+                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software<br/> consulting firm</a>{' '}
                 based out of Florence, AL. They took<br/>
-                me on and trained me on everything front to<br/>
-                back.
+                me in and trained me on everything from front to<br/>
+                back and beyond.
               </p>
             </div>
             <div className="flex items-center justify-start w-full">
@@ -178,8 +188,28 @@ const AboutMeDescription = () => {
             </div>
           </div>
         </div>
-        <div className='hidden xl:inline flex-col pt-4 pl-8'>
+        <div className='hidden xl:inline flex-col pl-8'>
           <Image src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
+        </div>
+        <div className='hidden xl:inline flex-col pl-2'>
+          <div className='m-4 ml-auto text-right'>
+            <a href='https://github.com/dubstephen/' target="_blank" rel="noopener noreferrer" onMouseEnter={() => setGHHovered(true)} onMouseLeave={() => setGHHovered(false)}>
+              { gHHovered ? 
+                <Image className='inline ' src='/github-mark-white-hovered.svg' width={25} height={25} alt="logo" />
+              :
+                <Image className='inline ' src='/github-mark-white.svg' width={25} height={25} alt="logo" />
+              }
+            </a>
+          </div>
+          <div className='m-4 ml-auto text-right'>
+            <a className='' href='https://www.linkedin.com/in/stephen-bloodworth/' target="_blank" rel="noopener noreferrer" onMouseEnter={() => setLIHovered(true)} onMouseLeave={() => setLIHovered(false)}>
+              { lIHovered ?
+                <Image className='inline ' src='/linkedin-svgrepo-com-hovered.svg' width={25} height={25} alt="logo" />
+              :
+                <Image className='inline ' src='/linkedin-svgrepo-com.svg' width={25} height={25} alt="logo" />
+              }
+            </a>
+          </div>
         </div>
       </div>
     </>
