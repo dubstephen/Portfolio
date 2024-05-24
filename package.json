@@ -1,4 +1,10 @@
 {
+  "private": true,
+  "name": "sb-portfolio-heroku-build",
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.5.1"
+  },
   "scripts": {
     "postinstall": "cd sb-portfolio/ && npm install",
     "start": "cd sb-portfolio/ && npm run dev"
