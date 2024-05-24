@@ -1,1 +1,1 @@
-web: ls sb-portfolio/app/scripts
+web: ls sb-portfolio/
