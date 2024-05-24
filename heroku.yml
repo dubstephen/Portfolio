@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: sb-portfolio/Dockerfile
+run:
+  web: npm run start
