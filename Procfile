@@ -1,1 +1,1 @@
-web: ls sb-portfolio/
+web: ls sb-portfolio/app/
