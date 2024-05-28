@@ -5,12 +5,12 @@ import { Button } from '@nextui-org/button';
 
 const HeroSection = () => {
   const HandleResumeDownload = () => {
-    fetch("/Stephen Bloodworth Resume.docx").then((response) => {
+    fetch("/Stephen Bloodworth Resume.pdf").then((response) => {
       response.blob().then((blob) => {
         let url = window.URL.createObjectURL(blob);
         let a = document.createElement("a");
         a.href = url;
-        a.download = "Stephen Bloodworth Resume.docx";
+        a.download = "Stephen Bloodworth Resume.pdf";
         a.click();
       });
     });
