@@ -89,7 +89,12 @@ export default function ContactForm() {
   };
   return (
     <>
-      <Button className='animate-buttonFadeIn my-8 mx-16 p-8 border-1 border-bismark text-bismark bg-opacity-0 hover:transition-all duration-75 hover:-translate-y-1 hover:-translate-x-1 ease-in rounded-md text-lg md:text-xl lor-button' onClick={() => openModal()}>Let's Talk</Button>
+      <Button
+        className='animate-buttonFadeIn my-8 mx-16 p-8 border-1 border-bismark text-bismark bg-opacity-0 hover:transition-all duration-75 hover:-translate-y-1 hover:-translate-x-1 ease-in rounded-md text-lg md:text-xl lor-button'
+        onClick={() => openModal()}
+      >
+        Get in touch
+      </Button>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement='center' size="3xl">
         <ModalContent className={`modal-content bg-blue-Zodiac ${emailReponse || fieldErrors ? 'overflow-y-scroll' : 'overflow-hidden'}`}>
           {(onClose) => (
