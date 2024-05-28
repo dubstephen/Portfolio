@@ -44,26 +44,29 @@ const clientCardRow2: ClientCard[] = [
   {
     id: '5',
     title: 'Workorder System',
-    description: 'A client presented the need for a modernized work order system that would automate \
+    description: 'A modernized work order system that automates \
     processes with QuickBooks. Using the following technologies, my team and I saw the completion of \
     this project from start to finish.',
     technologies: ['React', 'TS', 'Ionic', 'Django', 'Python'],
   },
   {
     id: '6',
-    title: 'Horse Tracking Application',
-    description: 'A client expressed the desire to create an application for managing horses. This app would keep track of the horse, maintenance records, stables, and more.',
+    title: 'Horse Managing Application',
+    description: 'An application for managing horses. This app keeps track of the horse, maintenance records, stables, and more.',
     technologies: ['React', 'TS', 'Ionic', 'Django', 'Python'],
   }
 ]
 
 const PreviousClientWork = () => {
   const [showSection, setShowSection] = useState<boolean>(false);
+  const [showMore, setShowMore] = useState<boolean>(false);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   if (isVisible && !showSection) {
     setShowSection(true);
   }
+
+  const showText = showMore ? 'Show Less' : 'Show More';
   return (
     <>
       <section id='previous-client-work' className='text-white bg-big-stone flex previous-client-work'>
@@ -74,12 +77,22 @@ const PreviousClientWork = () => {
             </div>
           </h3>
           <ul ref={ref} className="flex flex-row items-center justify-center gap-4 mt-8 md:mt-16 md:ml-auto flex-wrap">
-            {clientCardRow1.map((client: ClientCard) => (
-                  <ClientCard key={'client-card-'+client.id} client={client} />
-            ))}
-            {clientCardRow2.map((client: ClientCard) => (
-                  <ClientCard key={'client-card-'+client.id} client={client} />
-            ))}
+            {clientCardRow1.map((client: ClientCard) => {
+              return (
+                <ClientCard key={'client-card-'+client.id} client={client} showMore={true} />
+              )
+            })}
+            {clientCardRow2.map((client: ClientCard) => {
+              return (
+                <ClientCard key={'client-card-'+client.id} client={client} showMore={showMore} />
+              )
+            })}
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="md:hidden flex text-center items-center justify-center text-bismark text-xl hover:underline w-32 mt-12"
+            >
+              {showText}
+            </button>
           </ul>
         </div>
       </section>
