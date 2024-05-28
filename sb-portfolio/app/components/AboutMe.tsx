@@ -95,7 +95,7 @@ const AboutMeSection = () => {
               <div className={`transition-opacity  ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
                 <span className="text-cadet-blue text-md sm:text-xl md:text-3xl font-sans">About Me</span>
               </div>
-              <hr className="w-40 md:w-80 h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10 " />
+              <hr className="w-[60%] md:w-[13%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10 " />
             </div>
           </h3>
           <AboutMeDescription />

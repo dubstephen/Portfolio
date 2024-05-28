@@ -68,7 +68,7 @@ const config: Config = {
         borderXFadeIn1: {
           '0%': { width: '0' },
           '65%': { width: '0' },
-          '100%': { width: '10rem' },
+          '100%': { width: '66.3%' },
         },
         buttonYFadeIn: {
           '0%': { height: '0' },
@@ -109,6 +109,7 @@ const config: Config = {
       }),
       colors: {
         'big-stone': '#0a192f',
+        'small-stone': '#1C375E',
         'bismark': '#64ffda',
         'other-blue': '#77BAAA',
         'black-pearl': '#08192E',

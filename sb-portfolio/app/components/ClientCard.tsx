@@ -3,28 +3,29 @@ import { useState } from "react";
 
 interface Props {
   client: ClientCard;
+  showMore: boolean;
 }
 
 const ClientCardComponent = (props: Props) => {
   const [hovered, setHovered] = useState<boolean>(false);
-  const { client } = props;
+  const { client, showMore } = props;
   return (
-    <li className="flex flex-col md:justify-between card shadow-xl col-span-1 md:h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200"
+    <li className={`${showMore ? '' : 'hidden md:flex'} flex flex-col md:justify-between card shadow-xl col-span-1 md:h-80 w-full max-w-md bg-blue-Zodiac hover:bg-base-200`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
       <div className="relative px-6 py-4">
         { hovered ?
-          <h2 className="font-bold text-xl card-title text-bismark">{client.title}</h2>
+          <h2 className="font-bold text-xl card-title text-bismark text-center">{client.title}</h2>
         :
-          <h2 className="font-bold text-xl card-title text-gray-200">{client.title}</h2>
+          <h2 className="font-bold text-xl card-title text-gray-200 text-center">{client.title}</h2>
         }
       </div>
       <div className="px-6 pt-4 pb-6 text-start">
           <p className='text-cadet-blue text-base'>{client.description}</p>
       </div>
       { client.link &&
-        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline ml-6 w-20">See More</a>
+        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline ml-6 w-24">Learn More</a>
       }
       <div className="px-6 py-4 align-bottom pt-auto mb-0">
         { client.technologies.map((tech, index) => {

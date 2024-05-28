@@ -14,13 +14,15 @@ const PreviousJobs = () => {
   }
   return (
     <>
-    <section id='previous-jobs' className='text-white bg-big-stone justify-center md:justify-start md:text-left flex'>
-        <div className={`pl-8 pr-8 md:ml-auto md:mr-auto previous-jobs md:mb-0 mt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+    <section id='previous-jobs' className='text-white bg-big-stone flex md:columns-3'>
+      <div className='md:flex md:col-span-1 md:w-2/5 '/>
+      <div className={`md:flex md:col-span-2 pl-8 pr-8 justify-between items-center previous-jobs md:mb-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+        <div>
           <h3>
             <div className="flex items-center w-full">
               <span className="text-bismark text-md sm:text-xl md:text-3xl pr-2">02.</span>
               <span className="text-cadet-blue text-md sm:text-xl md:text-3xl">Previous Jobs</span>
-              <hr className="w-24 md:w-64 h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
+              <hr className="w-[50%] md:w-[13%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
             </div>
           </h3>
           <h4>
@@ -45,27 +47,26 @@ const PreviousJobs = () => {
             </div>
             <div className="text-flord text-sm ml-6">April 2020 - April 2024</div>
           </h4>
-          <div ref={ref} className="flex justify-start items-center w-full pt-6 md:ml-6">
+          <div ref={ref} className="flex justify-start items-center w-full pt-6 md:ml-6 md:w-1/2 ">
             <div className="h-24">
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
-                  {'>'}<br/>
-                  <br/>
-                  <span className='md:hidden'>
-                    <br/>
-                    <br/>
-                  </span>
+                  {'>'}
+                  <br className='min-[491px]:hidden min-[768px]:inline'/>
+                  <br className='min-[1512px]:hidden' />
+                  <br className='min-[390px]:hidden'/>
+                  <br className=''/>
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
-                  {'>'}<br/>
-                  <br/>
-                  <br/>
-                  <span className='md:hidden'>
-                    <br/>
-                    <br/>
-                  </span>
+                  {'>'}
+                  <br className='' />
+                  <br className='min-[1643px]:hidden'/>
+                  <br className='min-[412px]:hidden min-[768px]:inline'/>
+                  <br className='min-[1179px]:hidden'/>
+                  <br className='min-[360px]:hidden'/>
+                  <br className='min-[716px]:hidden min-[768px]:inline'/>
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
@@ -77,29 +78,31 @@ const PreviousJobs = () => {
             <div className="pl-2 h-24">
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
-                  Write modern, performant, maintainable code for a diverse<br/>
+                  Wrote modern, performant, maintainable code for a diverse
                   array of client and internal projects
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
-                  Work with a variety of different languages, platforms, and <br/>
-                  frameworks such as JavaScript, TypeScript, React,<br/>
+                  Worked with a variety of different languages, platforms, and 
+                  frameworks such as JavaScript, TypeScript, React,
                   Django, Python, .NET, and more!
                 </p>
               </div>
               <div className="flex items-center justify-start w-full">
                 <p className='pt-8 md:p-2 md:pb-12 text-cadet-blue text-lg md:text-xl '>
-                  Communicate with multi-disciplinary teams of engineers<br/>
+                  Communicated with multi-disciplinary teams of engineers
                   and clients on a daily basis
                 </p>
               </div>
-              <div className="flex items-center justify-start w-full">
+              <div className="flex items-center justify-start md:ml-28">
                 <LORModal />
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className='md:flex md:col-span-3'/>
     </section>
     </>
   )
