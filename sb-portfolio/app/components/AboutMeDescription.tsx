@@ -6,43 +6,43 @@ import TechRow from './TechRow';
 
 const technologiesRow1: Technology[] = [
   {
+    id: '1',
+    title: 'TypeScript',
+    imageSRC: '/typescript.svg',
+    link: 'https://www.typescriptlang.org/'
+  },
+  {
+    id: '2',
+    title: 'Lua',
+    imageSRC: '/lua-icon.svg',
+    link: 'https://www.lua.org/'
+  },
+  {
+    id: '3',
+    title: 'Python',
+    imageSRC: '/python-logo-only.svg',
+    link: 'https://www.python.org/',
+  }
+]
+const technologiesRow2: Technology[] = [
+  {
     title: 'Next.js',
     imageSRC: '/next-js-seeklogo.svg',
     link: 'https://nextjs.org/',
-    id: '1'
-  },
-  {
-    title: 'TypeScript',
-    imageSRC: '/typescript.svg',
-    link: 'https://www.typescriptlang.org/',
-    id: '2'
+    id: '4'
   },
   {
     title: 'Tailwind',
     imageSRC: '/Tailwind_CSS_Logo.svg',
     link: 'https://tailwindcss.com/',
-    id: '3'
-  },
-]
-const technologiesRow2: Technology[] = [
-  {
-    title: 'Django',
-    imageSRC: '/djangoproject.svg',
-    link: 'https://www.djangoproject.com/',
-    id: '4'
-  },
-  {
-    title: 'Python',
-    imageSRC: '/python-logo-only.svg',
-    link: 'https://www.python.org/',
     id: '5'
   },
   {
-    title: 'Lua',
-    imageSRC: '/lua-icon.svg',
-    link: 'https://www.lua.org/',
+    title: 'Ionic',
+    imageSRC: '/ionicframework-icon.svg',
+    link: 'https://ionicframework.com/',
     id: '6'
-  },
+  }
 ]
 const technologiesRow3: Technology[] = [
   {
@@ -58,11 +58,11 @@ const technologiesRow3: Technology[] = [
     id: '8'
   },
   {
-    title: 'Ionic',
-    imageSRC: '/ionicframework-icon.svg',
-    link: 'https://ionicframework.com/',
+    title: 'Django',
+    imageSRC: '/djangoproject.svg',
+    link: 'https://www.djangoproject.com/',
     id: '9'
-  }
+  },
 ]
 
 const AboutMeDescription = () => {
@@ -87,7 +87,7 @@ const AboutMeDescription = () => {
   }
   return (
     <>
-      <div className={`flex justify-center text transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+      <div className={`flex text transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
         <div className='flex-col font-sans'>
           <Image className='xl:hidden mx-auto mt-8 rounded-md' src={'/Profile Pic.jpg'} width={300} height={300} alt="logo" />
           <div className='xl:hidden text-center pt-8 mb-0 md:pt-4 md:mb-8'>
@@ -99,8 +99,8 @@ const AboutMeDescription = () => {
             </a>
           </div>
           <div id='mobile-about-me-desc' className='md:hidden'>
-            <div className="flex items-center justify-start w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
+            <div className="flex w-full">
+              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
                 Hello, My name is Stephen <br/>and I love building software!
                 My interest in software development started in the early
                 stages of my adult life, but I never thought I would be
@@ -109,8 +109,8 @@ const AboutMeDescription = () => {
                 to offer.
               </p>
             </div>
-            <div className="flex items-center justify-start w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
+            <div className="flex w-full">
+              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
                 I spent the next year learning everything I could in order
                 to launch my new career off the ground. I managed to
                 stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software consulting firm</a>{' '}
@@ -119,11 +119,11 @@ const AboutMeDescription = () => {
                 back and beyond.
               </p>
             </div>
-            <div className="flex items-center justify-start w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
+            <div className="flex w-full">
+              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
                 While working there I had many opurtunities to get
                 my hands on a wide variety of technologies.<br/><br/>
-                <span className='text-cadet-blue text-lg'>Here are just a few of my favorites:</span>
+                <span className='text-cadet-blue text-lg text-center'>Here are just a few of my favorites:</span>
               </p>
             </div>
           </div>
@@ -157,11 +157,11 @@ const AboutMeDescription = () => {
             </div>
           </div>
           <div className=" pt-8">
-            <div className="w-full columns-3">
+            <div className="w-full columns-3 flex justify-center">
               <div className="">
                 { technologiesRow1.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                    <div key={'tech-item-'+tech.id} className='mr-8 md:mx-6 mb-12'>
                       <TechRow tech={tech} />
                     </div>
                   )
@@ -170,7 +170,7 @@ const AboutMeDescription = () => {
               <div className="">
                 { technologiesRow2.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                    <div key={'tech-item-'+tech.id} className='mx-8 md:mx-6 mb-12'>
                       <TechRow tech={tech} />
                     </div>
                   )
@@ -179,7 +179,7 @@ const AboutMeDescription = () => {
               <div className="">
                 { technologiesRow3.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='pb-16'>
+                    <div key={'tech-item-'+tech.id} className='ml-8 md:mx-6 mb-12'>
                       <TechRow tech={tech} />
                     </div>
                   )

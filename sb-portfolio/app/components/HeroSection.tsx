@@ -48,7 +48,7 @@ const HeroSection = (props: Props) => {
             </p>
             <div className="relative flex items-center ">
               <span className="animate-borderYFadeIn1 absolute left-0 bottom-0 h-0 w-0 border-l-1 border-blue-Dianne" />
-              <span className="xl:animate-borderYFadeIn2 absolute right-64 xl:right-[19rem] top-0 h-0 w-0 border-r-1 border-blue-Dianne " />
+              <span className="xl:animate-borderYFadeIn2 absolute right-64 xl:right-[19.2rem] top-0 h-0 w-0 border-r-1 border-blue-Dianne " />
               <div className="animate-borderXFadeIn1 left-0 top-0 h-0 border-t-1 border-blue-Dianne" />
             </div>
           </span>

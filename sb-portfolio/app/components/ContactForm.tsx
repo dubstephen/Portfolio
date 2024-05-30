@@ -49,15 +49,15 @@ export default function ContactForm() {
     let errors = {};
     let formIsValid = true;
     if (contact['company'] === '' && contact['name'] === '') {
-      errors['company'] = "Please enter either your name or your company's name";
-      errors['name'] = "Please enter either your name or your company's name";
+      errors['company'] = "Please enter your NAME and/or your COMPANY'S NAME.";
+      errors['name'] = "Please enter your NAME and/or your COMPANY'S NAME.";
       formIsValid = false
     }
     for (let index in requiredFields) {
       let field: keyof Contact = requiredFields[index];
       if (contact[field] === '') {
         formIsValid = false
-        errors[field] = "This field is required"
+        errors[field] = "Please enter your "+field+"."
       }
     }
     return [formIsValid, errors];
@@ -104,29 +104,29 @@ export default function ContactForm() {
               <ModalBody ref={formMessage} >
                 <div className="pt-6">
                   { emailReponse === 'Success' ? 
-                  <div  id="form-message" className="text-big-stone text-center bg-green-700 pt-4 rounded-lg md:mx-24">
-                    <div className="bg-green-300 py-4 rounded-b-md">
+                  <div id="form-message" className="text-big-stone text-center bg-green-700 pt-4 rounded-lg md:mx-24">
+                    <div className="bg-green-300 py-4 my-4 md:my-2 rounded-b-md">
                       Message sent!
                     </div>
                   </div>
                   :
-                  <div  />
+                  <div/>
                   }
                   { emailReponse === 'Error' ? 
-                  <div  className="text-big-stone text-center bg-red-700 pt-4 rounded-lg md:mx-24">
-                    <div className="bg-red-300 py-4 rounded-b-md px-2 md:px-6">
+                  <div className="text-big-stone text-center bg-red-700 pt-4 rounded-lg md:mx-24">
+                    <div className="bg-red-300 py-4 my-4 md:my-2 rounded-b-md px-2 md:px-6">
                       Oh no! something happened. <br/>Try contacting me directly at: <br/><span className="font-bold">s.bloodworth842@gmail.com</span>
                     </div>
                   </div>
                   :
-                    <div  />
+                    <div/>
                   }
                   <form onSubmit={handleSubmit} className="lg:pt-8 md:mx-24 max-w-screen-md ">
                     <label className="block mb-2 text-sm font-medium text-flord">Name</label>
                     <input
                       type="text"
                       id="name"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      className=" bg-small-stone shadow-sm shadow-slate-900 border-1 border-t-0 border-big-stone border-b-blue-Dianne border-l-blue-Dianne text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
                       placeholder="John/Jane Doe"
                       onChange={updateContact('name')}
                     />
@@ -135,7 +135,7 @@ export default function ContactForm() {
                     <input
                       type="text"
                       id="company"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      className=" bg-small-stone shadow-sm shadow-slate-900 border-1 border-t-0 border-big-stone border-b-blue-Dianne border-l-blue-Dianne text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
                       placeholder="Company Inc."
                       onChange={updateContact('company')}
                     />
@@ -144,7 +144,7 @@ export default function ContactForm() {
                     <input
                       type="email"
                       id="email"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      className=" bg-small-stone shadow-sm shadow-slate-900 border-1 border-t-0 border-big-stone border-b-blue-Dianne border-l-blue-Dianne text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
                       placeholder="e@mail.com"
                       onChange={updateContact('email')}
                       required
@@ -154,7 +154,7 @@ export default function ContactForm() {
                     <input
                       type="text"
                       id="subject"
-                      className="block w-full text-sm text-flord bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 p-4"
+                      className="block w-full text-sm text-flord bg-small-stone rounded-lg shadow-sm shadow-slate-900 border-1 border-t-0 border-big-stone border-b-blue-Dianne border-l-blue-Dianne focus:ring-primary-500 focus:border-primary-500 p-4"
                       placeholder="Let me know how I can help you"
                       onChange={updateContact('subject')}
                       required
@@ -164,7 +164,7 @@ export default function ContactForm() {
                     <textarea
                       id="message"
                       rows={6}
-                      className="block w-full text-sm text-flord bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 p-4"
+                      className="block w-full text-sm text-flord bg-small-stone rounded-lg shadow-sm shadow-slate-900 border-1 border-t-0 border-big-stone border-b-blue-Dianne border-l-blue-Dianne focus:ring-primary-500 focus:border-primary-500 p-4"
                       placeholder="Leave a message..."
                       onChange={updateContact('message')}
                       required
