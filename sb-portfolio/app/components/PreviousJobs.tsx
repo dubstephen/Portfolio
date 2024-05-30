@@ -20,14 +20,14 @@ const PreviousJobs = (props: Props) => {
   return (
     <>
     <section id='previous-jobs' className='text-white bg-big-stone flex md:columns-3'>
-      <div className='hidden md:flex md:col-span-1 md:w-2/5 '/>
-      <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} flex items-center justify-center md:col-span-2 pl-8 pr-8  previous-jobs mb-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+      <div className='hidden md:flex md:col-span-1 md:w-2/5 pr-32'/>
+      <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} flex justify-center md:col-span-2 pl-8 pr-8 previous-jobs mb-32 pt-16 md:pt-28 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
         <div>
-          <h3>
-            <div className="flex items-center w-full">
-              <span className="text-bismark text-md sm:text-xl md:text-3xl pr-2">02.</span>
-              <span className="text-cadet-blue text-md sm:text-xl md:text-3xl">Previous Jobs</span>
-              <hr className="w-[50%] md:w-[13%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
+          <h3 >
+            <div className="flex items-center w-full mb-2">
+              <span className="text-bismark text-2xl sm:text-xl md:text-3xl pr-2">02.</span>
+              <span className="text-cadet-blue text-2xl sm:text-xl md:text-3xl">Employment</span>
+              <hr className="w-[50%] md:w-[28%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
             </div>
           </h3>
           <h4>
@@ -100,7 +100,7 @@ const PreviousJobs = (props: Props) => {
                   and clients on a daily basis
                 </p>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center 2xl:mr-36">
                 <LORModal />
               </div>
             </div>
