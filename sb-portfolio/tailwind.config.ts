@@ -68,7 +68,7 @@ const config: Config = {
         borderXFadeIn1: {
           '0%': { width: '0' },
           '65%': { width: '0' },
-          '100%': { width: '66.3%' },
+          '100%': { width: '60%' },
         },
         buttonYFadeIn: {
           '0%': { height: '0' },
@@ -83,7 +83,8 @@ const config: Config = {
         borderYFadeIn2: {
           '0%': { height: '0' },
           '65%': { height: '0' },
-          '100%': { height: '24rem' },
+          '100%': { height: '68rem' },
+          // '100%': { height: '6rem' },
         },
         typing: {
           from: {
