@@ -5,6 +5,10 @@ import './PreviousClientWork.css'
 import ClientCard from './ClientCard'
 import { useIsVisible } from '../helpers'
 
+interface Props {
+  navBarIsOpen: boolean;
+}
+
 const clientCardRow1: ClientCard[] = [
   {
     id: '1',
@@ -57,7 +61,8 @@ const clientCardRow2: ClientCard[] = [
   }
 ]
 
-const PreviousClientWork = () => {
+const PreviousClientWork = (props: Props) => {
+  const { navBarIsOpen } = props;
   const [showSection, setShowSection] = useState<boolean>(false);
   const [showMore, setShowMore] = useState<boolean>(false);
   const ref = useRef();
@@ -65,12 +70,12 @@ const PreviousClientWork = () => {
   if (isVisible && !showSection) {
     setShowSection(true);
   }
-
   const showText = showMore ? 'Show Less' : 'Show More';
+  const scrollTo = showMore ? '#client-card-3' : '#client-card-2';
   return (
     <>
       <section id='previous-client-work' className='text-white bg-big-stone flex previous-client-work'>
-        <div className={`ml-8 mr-8 md:mb-32 mt-32 md:mt-0 md:pt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+        <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} ml-8 mr-8 md:mb-32 mt-32 md:mt-0 md:pt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
           <h3>
             <div className="flex w-full ml-auto items-center justify-center">
               <span className="text-cadet-blue text-2xl">Previous Client Work</span>
@@ -87,12 +92,13 @@ const PreviousClientWork = () => {
                 <ClientCard key={'client-card-'+client.id} client={client} showMore={showMore} />
               )
             })}
-            <button
+            <a
+              href={scrollTo}
               onClick={() => setShowMore(!showMore)}
               className="md:hidden flex text-center items-center justify-center text-bismark text-xl hover:underline w-32 mt-12"
             >
               {showText}
-            </button>
+            </a>
           </ul>
         </div>
       </section>

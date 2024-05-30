@@ -3,8 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const NavBar = () => {
-  const [navBar, setNavBar] = useState<boolean>(false);
+interface Props {
+  navBarIsOpen: boolean;
+  toggleNavBar: Function;
+}
+
+const NavBar = (props: Props) => {
+  const { navBarIsOpen, toggleNavBar } = props;
   const navOptions: NavOption[] = [
     {
       title: 'About',

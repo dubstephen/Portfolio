@@ -1,9 +1,13 @@
 'use client';
 import React from 'react';
 import './HeroSection.css';
-import { Button } from '@nextui-org/button';
 
-const HeroSection = () => {
+interface Props {
+  navBarIsOpen: boolean;
+}
+
+const HeroSection = (props: Props) => {
+  const { navBarIsOpen } = props;
   const HandleResumeDownload = () => {
     fetch("/Stephen Bloodworth Resume.pdf").then((response) => {
       response.blob().then((blob) => {
