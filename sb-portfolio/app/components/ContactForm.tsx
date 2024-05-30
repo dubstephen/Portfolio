@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/modal";
 import { Button } from '@nextui-org/button';
 
@@ -25,6 +25,7 @@ export default function ContactForm() {
   const [contact, setContact] = useState<Contact>(emptyContact);
   const [emailReponse, setEmailResponse] = useState<string>("");
   const [fieldErrors, setFieldErrors] = useState<ContactErrors>(initialErrors);
+  const formMessage = useRef();
 
   const openModal = () => {
     setEmailResponse("");
@@ -86,6 +87,7 @@ export default function ContactForm() {
       setEmailResponse(status);
     }
     setFieldErrors(errors);
+    formMessage.current?.scrollIntoView();
   };
   return (
     <>
@@ -95,84 +97,81 @@ export default function ContactForm() {
       >
         Get in touch
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement='center' size="3xl">
-        <ModalContent className={`modal-content bg-blue-Zodiac ${emailReponse || fieldErrors ? 'overflow-y-scroll' : 'overflow-hidden'}`}>
+      <Modal  isOpen={isOpen} onOpenChange={onOpenChange} placement='center' size="3xl">
+        <ModalContent id="modal-form" className={`modal-content bg-blue-Zodiac ${emailReponse || fieldErrors ? 'overflow-y-scroll' : 'overflow-hidden'}`}>
           {(onClose) => (
             <>
-              <ModalBody>
-                <h3>
-                  <div className="flex w-full ml-auto items-center justify-center ">
-                    <span className=" pt-4 text-2xl text-cadet-blue">Contact Me</span>
-                  </div>
-                </h3>
+              <ModalBody ref={formMessage} >
+                <div className="pt-6">
                   { emailReponse === 'Success' ? 
-                  <div className="text-big-stone text-center bg-green-700 pt-4 rounded-lg md:mx-24">
+                  <div  id="form-message" className="text-big-stone text-center bg-green-700 pt-4 rounded-lg md:mx-24">
                     <div className="bg-green-300 py-4 rounded-b-md">
-                      I recieved your message!
+                      Message sent!
                     </div>
                   </div>
                   :
-                  <></>
+                  <div  />
                   }
                   { emailReponse === 'Error' ? 
-                  <div className="text-big-stone text-center bg-red-700 pt-4 rounded-lg md:mx-24">
-                    <div className="bg-red-300 py-4 rounded-b-md">
-                      oh no! We encountered an error! Try again later.
+                  <div  className="text-big-stone text-center bg-red-700 pt-4 rounded-lg md:mx-24">
+                    <div className="bg-red-300 py-4 rounded-b-md px-2 md:px-6">
+                      Oh no! something happened. <br/>Try contacting me directly at: <br/><span className="font-bold">s.bloodworth842@gmail.com</span>
                     </div>
                   </div>
                   :
-                  <></>
+                    <div  />
                   }
-                <form onSubmit={handleSubmit} className="lg:pt-8 md:mx-24 max-w-screen-md ">
-                  <label className="block mb-2 text-sm font-medium text-flord">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
-                    placeholder="John/Jane Doe"
-                    onChange={updateContact('name')}
-                  />
-                  <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.name || ""}</div>
-                  <label className="block mb-2 text-sm font-medium text-flord">Company</label>
-                  <input
-                    type="text"
-                    id="company"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
-                    placeholder="Company Inc."
-                    onChange={updateContact('company')}
-                  />
-                  <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.company || ""}</div>
-                  <label className="block mb-2 text-sm font-medium text-flord">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
-                    placeholder="e@mail.com"
-                    onChange={updateContact('email')}
-                    required
-                  />
-                  <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.email || ""}</div>
-                  <label className="block mb-2 text-sm font-medium text-flord">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="block w-full text-sm text-flord bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 p-4"
-                    placeholder="Let me know how I can help you"
-                    onChange={updateContact('subject')}
-                    required
-                  />
-                  <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.subject || ""}</div>
-                  <label className="block mb-2 text-sm font-medium text-flord">Message</label>
-                  <textarea
-                    id="message"
-                    rows={6}
-                    className="block w-full text-sm text-flord bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 p-4"
-                    placeholder="Leave a message..."
-                    onChange={updateContact('message')}
-                    required
-                  />
-                  <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.message || ""}</div>
-                </form>
+                  <form onSubmit={handleSubmit} className="lg:pt-8 md:mx-24 max-w-screen-md ">
+                    <label className="block mb-2 text-sm font-medium text-flord">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      placeholder="John/Jane Doe"
+                      onChange={updateContact('name')}
+                    />
+                    <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.name || ""}</div>
+                    <label className="block mb-2 text-sm font-medium text-flord">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      placeholder="Company Inc."
+                      onChange={updateContact('company')}
+                    />
+                    <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.company || ""}</div>
+                    <label className="block mb-2 text-sm font-medium text-flord">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-flord text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
+                      placeholder="e@mail.com"
+                      onChange={updateContact('email')}
+                      required
+                    />
+                    <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.email || ""}</div>
+                    <label className="block mb-2 text-sm font-medium text-flord">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      className="block w-full text-sm text-flord bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 p-4"
+                      placeholder="Let me know how I can help you"
+                      onChange={updateContact('subject')}
+                      required
+                    />
+                    <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.subject || ""}</div>
+                    <label className="block mb-2 text-sm font-medium text-flord">Message</label>
+                    <textarea
+                      id="message"
+                      rows={6}
+                      className="block w-full text-sm text-flord bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 p-4"
+                      placeholder="Leave a message..."
+                      onChange={updateContact('message')}
+                      required
+                    />
+                    <div className="mb-2 md:mb-4 text-red-500">{fieldErrors.message || ""}</div>
+                  </form>
+                </div>
               </ModalBody>
               <ModalFooter className="pt-0 justify-center md:justify-end">
                 <Button className="mb-8 md:mb-4 mr-2 border-1 border-some-red hover:bg-opacity-100 text-white bg-some-red rounded-md" onClick={onClose}>
