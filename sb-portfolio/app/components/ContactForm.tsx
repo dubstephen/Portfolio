@@ -49,15 +49,15 @@ export default function ContactForm() {
     let errors = {};
     let formIsValid = true;
     if (contact['company'] === '' && contact['name'] === '') {
-      errors['company'] = "Please enter either your name or your company's name";
-      errors['name'] = "Please enter either your name or your company's name";
+      errors['company'] = "Please enter your NAME and/or your COMPANY'S NAME.";
+      errors['name'] = "Please enter your NAME and/or your COMPANY'S NAME.";
       formIsValid = false
     }
     for (let index in requiredFields) {
       let field: keyof Contact = requiredFields[index];
       if (contact[field] === '') {
         formIsValid = false
-        errors[field] = "This field is required"
+        errors[field] = "Please enter your "+field+"."
       }
     }
     return [formIsValid, errors];
