@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import './HeroSection.css';
 
 interface Props {
@@ -8,6 +8,8 @@ interface Props {
 
 const HeroSection = (props: Props) => {
   const { navBarIsOpen } = props;
+  const [expPos, setExpPos] = useState<number>(0);
+  const [expStyle, setExpStyle] = useState<string>('');
   const HandleResumeDownload = () => {
     fetch("/Stephen Bloodworth Resume.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -18,6 +20,10 @@ const HeroSection = (props: Props) => {
         a.click();
       });
     });
+  };
+
+  const StartExperience = () => {
+    setExpStyle('translate-x-10');
   };
 
   return (
@@ -44,7 +50,10 @@ const HeroSection = (props: Props) => {
             <p className='ml-auto mr-auto w-80 md:w-full pt-8 md:mt-4 md:p-2 text-flord text-lg md:text-xl font-sans animate-typing2 overflow-hidden inline-block whitespace-nowrap'>
               I am <br/>an engineer <br/>specializing in building <br/>highly performant
               applications that <br/>provide users with an
-              awesome experience.
+              awesome
+              <span
+                onClick={() => StartExperience()}
+                className={`cursor-pointer animate-fadeIn4 transition-all duration-700 ${ expStyle ? '' : 'hover:translate-x-1'} ${expStyle} pl-2 absolute text-bismark`}>Experience</span>
             </p>
             <div className="relative flex items-center ">
               <span className="animate-borderYFadeIn1 absolute left-0 bottom-0 h-0 w-0 border-l-1 border-blue-Dianne" />
