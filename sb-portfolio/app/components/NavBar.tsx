@@ -67,7 +67,7 @@ const NavBar = (props: Props) => {
                   return (
                     <Link key={'nav-item-'+index} href={option.link} scroll={true} onClick={() => toggleNavBar(false)}>
                       <li className="pb-6 text-lg text-white py-6 md:py-4  md:px-6 text-center border-blue-Dianne border-b-2 md:border-b-0">
-                          <span className="text-bismark">0{index}.</span> <span className="text-cadet-blue hover:text-bismark">{option.title}</span>
+                          <span className="text-bismark text-start">0{index}.</span> <span className="text-cadet-blue hover:text-bismark">{option.title}</span>
                       </li>
                     </Link>
                   )
