@@ -28,10 +28,12 @@ export async function POST(req: Request, res: any) {
     }
   
     try {
-      await sgMail.send(data);
-      return NextResponse.json({
-        status: 'Success',
-      })
+      const response = await sgMail.send(data);
+      if (response[0].statusCode === 202) {
+        return NextResponse.json({
+          status: 'Success',
+        })
+      }
     } catch (e) {
       return NextResponse.json({
         status: 'Error',
