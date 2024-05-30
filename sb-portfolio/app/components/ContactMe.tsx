@@ -4,12 +4,16 @@ import {Input} from "@nextui-org/react";
 import './ContactMe.css'
 import ContactForm from './ContactForm';
 
-const ContactMe = () => {
+interface Props {
+  navBarIsOpen: boolean;
+}
 
+const ContactMe = (props: Props) => {
+  const { navBarIsOpen } = props;
   return (
     <>
       <section id='contact-me' className='text-white bg-gradient-to-b from-big-stone to-small-stone justify-center md:text-left flex contact-me'>
-        <div  className="ml-8 mr-8 mb-8 mt-64 md:mt-40 md:justify-between">
+        <div  className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} ml-8 mr-8 mb-8 mt-64 md:mt-40 md:justify-between`}>
           <h3>
             <div className='flex items-center justify-center'>
               <span className="text-cadet-blue text-xl md:text-3xl font-sans">Let's talk about your project!</span>

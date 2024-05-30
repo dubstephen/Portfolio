@@ -5,6 +5,10 @@ import './AboutMe.css'
 import TechRow from './TechRow';
 import AboutMeDescription from './AboutMeDescription';
 
+interface Props {
+  navBarIsOpen: boolean;
+}
+
 const technologiesRow1: Technology[] = [
   {
     title: 'Next.js',
@@ -66,7 +70,8 @@ const technologiesRow3: Technology[] = [
   }
 ]
 
-const AboutMeSection = () => {
+const AboutMeSection = (props: Props) => {
+  const { navBarIsOpen } = props;
   const [showSection, setShowSection] = useState<boolean>(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -88,7 +93,7 @@ const AboutMeSection = () => {
     <>
       <section className='text-white bg-big-stone justify-center md:text-left flex about'>
         <span id='about' className=" md:mb-0 mt-12 " />
-        <div  className="ml-8 mr-8 md:mb-0 mt-36 md:mt-32 ">
+        <div  className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} ml-8 mr-8 md:mb-0 mt-36 md:mt-32`}>
           <h3>
             <div className={`flex items-center w-full transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
               <span className="text-bismark text-md sm:text-xl md:text-3xl pr-2 font-mono">01.</span>

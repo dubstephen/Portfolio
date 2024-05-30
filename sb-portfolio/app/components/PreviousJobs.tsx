@@ -5,7 +5,12 @@ import './PreviousJobs.css'
 import LORModal from './LORModal'
 import { useIsVisible } from '../helpers';
 
-const PreviousJobs = () => {
+interface Props {
+  navBarIsOpen: boolean;
+}
+
+const PreviousJobs = (props: Props) => {
+  const { navBarIsOpen } = props;
   const [showSection, setShowSection] = useState<boolean>(false);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
@@ -15,8 +20,8 @@ const PreviousJobs = () => {
   return (
     <>
     <section id='previous-jobs' className='text-white bg-big-stone flex md:columns-3'>
-      <div className='md:flex md:col-span-1 md:w-2/5 '/>
-      <div className={`md:flex md:col-span-2 pl-8 pr-8 justify-between items-center previous-jobs md:mb-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+      <div className='hidden md:flex md:col-span-1 md:w-2/5 '/>
+      <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} flex items-center justify-center md:col-span-2 pl-8 pr-8  previous-jobs mb-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
         <div>
           <h3>
             <div className="flex items-center w-full">
@@ -95,14 +100,14 @@ const PreviousJobs = () => {
                   and clients on a daily basis
                 </p>
               </div>
-              <div className="flex items-center justify-start md:ml-28">
+              <div className="flex items-center justify-center">
                 <LORModal />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className='md:flex md:col-span-3'/>
+      {/* <div className='md:flex md:col-span-3'/> */}
     </section>
     </>
   )
