@@ -68,7 +68,7 @@ const config: Config = {
         borderXFadeIn1: {
           '0%': { width: '0' },
           '65%': { width: '0' },
-          '100%': { width: '60%' },
+          '100%': { width: '59.5%' },
         },
         buttonYFadeIn: {
           '0%': { height: '0' },
