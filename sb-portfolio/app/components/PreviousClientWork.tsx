@@ -70,14 +70,14 @@ const PreviousClientWork = (props: Props) => {
     setShowSection(true);
   }
   const showText = showMore ? 'Show Less' : 'Show More';
-  const scrollTo = showMore ? '#client-card-3' : '#client-card-2';
+  const scrollTo = showMore ? '#client-card-2' : '#client-card-1';
   return (
     <>
       <section id='previous-client-work' className='text-white bg-big-stone flex previous-client-work'>
-        <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} ml-8 mr-8 md:mb-32 mt-32 md:mt-0 md:pt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
+        <div className={`transition-all duration-75 ${navBarIsOpen ? 'blur-sm ' : ''} ml-8 mr-8 md:mb-32 mt-16 md:mt-0 md:pt-32 transition-opacity ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
           <h3>
             <div className="flex w-full ml-auto items-center justify-center">
-              <span className="text-cadet-blue text-2xl">Previous Client Work</span>
+              <span className="text-cadet-blue text-2xl">Work I've Done</span>
             </div>
           </h3>
           <ul ref={ref} className="flex flex-row items-center justify-center gap-4 mt-8 md:mt-16 md:ml-auto flex-wrap">
