@@ -6,43 +6,43 @@ import TechRow from './TechRow';
 
 const technologiesRow1: Technology[] = [
   {
+    id: '1',
+    title: 'TypeScript',
+    imageSRC: '/typescript.svg',
+    link: 'https://www.typescriptlang.org/'
+  },
+  {
+    id: '2',
+    title: 'Lua',
+    imageSRC: '/lua-icon.svg',
+    link: 'https://www.lua.org/'
+  },
+  {
+    id: '3',
+    title: 'Python',
+    imageSRC: '/python-logo-only.svg',
+    link: 'https://www.python.org/',
+  }
+]
+const technologiesRow2: Technology[] = [
+  {
     title: 'Next.js',
     imageSRC: '/next-js-seeklogo.svg',
     link: 'https://nextjs.org/',
-    id: '1'
-  },
-  {
-    title: 'TypeScript',
-    imageSRC: '/typescript.svg',
-    link: 'https://www.typescriptlang.org/',
-    id: '2'
+    id: '4'
   },
   {
     title: 'Tailwind',
     imageSRC: '/Tailwind_CSS_Logo.svg',
     link: 'https://tailwindcss.com/',
-    id: '3'
-  },
-]
-const technologiesRow2: Technology[] = [
-  {
-    title: 'Django',
-    imageSRC: '/djangoproject.svg',
-    link: 'https://www.djangoproject.com/',
-    id: '4'
-  },
-  {
-    title: 'Python',
-    imageSRC: '/python-logo-only.svg',
-    link: 'https://www.python.org/',
     id: '5'
   },
   {
-    title: 'Lua',
-    imageSRC: '/lua-icon.svg',
-    link: 'https://www.lua.org/',
+    title: 'Ionic',
+    imageSRC: '/ionicframework-icon.svg',
+    link: 'https://ionicframework.com/',
     id: '6'
-  },
+  }
 ]
 const technologiesRow3: Technology[] = [
   {
@@ -58,11 +58,11 @@ const technologiesRow3: Technology[] = [
     id: '8'
   },
   {
-    title: 'Ionic',
-    imageSRC: '/ionicframework-icon.svg',
-    link: 'https://ionicframework.com/',
+    title: 'Django',
+    imageSRC: '/djangoproject.svg',
+    link: 'https://www.djangoproject.com/',
     id: '9'
-  }
+  },
 ]
 
 const AboutMeDescription = () => {
