@@ -27,7 +27,7 @@ const ClientCardComponent = (props: Props) => {
       { client.link &&
         <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline ml-6 w-24">Learn More</a>
       }
-      <div className="px-6 py-4 align-bottom pt-auto mb-0">
+      <div id={'client-card-'+client.id} className="px-6 py-4 align-bottom pt-auto mb-0">
         { client.technologies.map((tech, index) => {
           return (
             <span key={'client-'+client.id+'-tech-'+index} className="inline-block bg-black-pearl rounded-full px-3 py-1 text-sm font-semibold text-cadet-blue mr-2 mb-2">#{tech}</span>
