@@ -41,7 +41,7 @@ const clientCardRow2: ClientCard[] = [
     id: '4',
     title: 'Luxury Coach Management Tool',
     description: "Helped build and maintain a tool designed for managing fleets of luxury coaches to be leased out for top touring musicians.\
-    I added code that would calculate pricing based on a number of factors such as hourly rates for drivers, how many stop, which cities, etc.",
+    I added code that would calculate pricing based on a number of factors such as hourly rates for drivers, how many stops, which cities, etc.",
     link: 'https://cypressmill.co/project-showcase/senators-coaches/',
     technologies: ['Python', 'React', 'JS'],
   },
