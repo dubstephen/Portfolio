@@ -26,9 +26,9 @@ const technologiesRow1: Technology[] = [
 ]
 const technologiesRow2: Technology[] = [
   {
-    title: 'Next.js',
-    imageSRC: '/next-js-seeklogo.svg',
-    link: 'https://nextjs.org/',
+    title: 'React',
+    imageSRC: '/react-2.svg',
+    link: 'https://react.dev/',
     id: '4'
   },
   {
