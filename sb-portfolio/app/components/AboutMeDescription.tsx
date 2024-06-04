@@ -101,7 +101,7 @@ const AboutMeDescription = () => {
           <div id='mobile-about-me-desc' className='md:hidden'>
             <div className="flex w-full">
               <p className='pt-8 md:p-2 text-flord text-lg text-center '>
-                Hello, My name is Stephen <br/>and I love building software!
+                Hello, my name is Stephen <br/>and I love building software!
                 My interest in software development started in the early
                 stages of my adult life, but I never thought I would be
                 able to truly pursue it. It was not until spring of 2019 that
@@ -130,7 +130,7 @@ const AboutMeDescription = () => {
           <div id='desktop-about-me-desc' className='hidden md:inline'>
             <div className="flex items-center justify-start w-full">
               <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
-                Hello, My name is Stephen and I love building software!<br/>
+                Hello, my name is Stephen and I love building software!<br/>
                 My interest in software development started in the early<br/>
                 stages of my adult life, but I never thought I would be<br/>
                 able to truly pursue it. It was not until spring of 2019 that<br/>
