@@ -5,10 +5,12 @@ import AboutMeDescription from './AboutMeDescription';
 
 interface Props {
   navBarIsOpen: boolean;
+  lightDividerActive: boolean;
+  toggleDivider: Function;
 }
 
 const AboutMeSection = (props: Props) => {
-  const { navBarIsOpen } = props;
+  const { navBarIsOpen, lightDividerActive, toggleDivider } = props;
   const [showSection, setShowSection] = useState<boolean>(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -37,7 +39,13 @@ const AboutMeSection = (props: Props) => {
               <div className={`transition-opacity  ease-in duration-700 ${showSection ? "opacity-100" : "opacity-0"}`}>
                 <span className="text-cadet-blue text-2xl sm:text-xl md:text-3xl font-sans">About Me</span>
               </div>
-              <hr className="w-[43%] md:w-[31%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
+              <hr className={`${
+                  lightDividerActive ?
+                  'transition-all duration-500 border-bismark rounded-xl border-l-1.5' :
+                  'transition-all duration-500 border-blue-Dianne h-0.5'
+                } w-[43%] md:w-[31%] h-0.5 ml-2 my-4 rounded md:my-10`}
+                  onClick={() => toggleDivider(!lightDividerActive)}
+              />
             </div>
           </h3>
           <AboutMeDescription />

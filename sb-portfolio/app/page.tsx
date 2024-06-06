@@ -10,17 +10,21 @@ import { useState } from 'react'
 
 export default function Home() {
   const [navBar, setNavBar] = useState<boolean>(false);
+  const [lightDividerActive, setLightDividerActive] = useState<boolean>(false);
 
   const toggleNavBar = (navBarState: boolean) => {
     setNavBar(navBarState)
+  };
+  const toggleDivider = (dividerState: boolean) => {
+    setLightDividerActive(dividerState)
   };
   return (
     <main className='h-fit !scroll-smooth '>
       <NavBar navBarIsOpen={navBar} toggleNavBar={toggleNavBar} />
       <span onClick={() => setNavBar(false)}>
-        <HeroSection navBarIsOpen={navBar}/>
-        <AboutMe navBarIsOpen={navBar}/>
-        <PreviousJobs navBarIsOpen={navBar}/>
+        <HeroSection navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
+        <AboutMe navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
+        <PreviousJobs navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
         {/* <PersonalProjects navBarIsOpen={navBar}/> */}
         <PreviousClientWork navBarIsOpen={navBar}/>
         <ContactMe navBarIsOpen={navBar}/>

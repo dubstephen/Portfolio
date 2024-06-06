@@ -84,7 +84,6 @@ const config: Config = {
           '0%': { height: '0' },
           '65%': { height: '0' },
           '100%': { height: '68rem' },
-          // '100%': { height: '6rem' },
         },
         typing: {
           from: {
@@ -95,6 +94,11 @@ const config: Config = {
           },
         },
         typing2: {
+          '0%': { width: '0', color: 'transparent' },
+          '50%': { width: '0', color: 'transparent' },
+          '100%': { width: '40ch' },
+        },
+        typing3: {
           '0%': { width: '0', color: 'transparent' },
           '50%': { width: '0', color: 'transparent' },
           '100%': { width: '40ch' },

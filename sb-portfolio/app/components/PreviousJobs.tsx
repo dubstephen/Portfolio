@@ -7,10 +7,12 @@ import { useIsVisible } from '../helpers';
 
 interface Props {
   navBarIsOpen: boolean;
+  lightDividerActive: boolean;
+  toggleDivider: Function;
 }
 
 const PreviousJobs = (props: Props) => {
-  const { navBarIsOpen } = props;
+  const { navBarIsOpen, lightDividerActive, toggleDivider } = props;
   const [showSection, setShowSection] = useState<boolean>(false);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
@@ -27,7 +29,12 @@ const PreviousJobs = (props: Props) => {
             <div className="flex items-center w-full mb-2">
               <span className="text-bismark text-2xl sm:text-xl md:text-3xl pr-2">02.</span>
               <span className="text-cadet-blue text-2xl sm:text-xl md:text-3xl">Employment</span>
-              <hr className="w-[50%] md:w-[28%] h-0.5 ml-2 my-4 bg-blue-Dianne border-0 rounded md:my-10" />
+              <hr className={`${
+                  lightDividerActive ?
+                  'transition-all duration-500 border-bismark rounded-xl border-l-1.5' :
+                  'transition-all duration-500 border-blue-Dianne h-0.5'
+                } w-[50%] md:w-[28%] h-0.5 ml-2 my-4 rounded md:my-10 cursor-pointer`}
+                onClick={() => toggleDivider(!lightDividerActive)} />
             </div>
           </h3>
           <h4>

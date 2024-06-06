@@ -1,13 +1,16 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import './HeroSection.css';
 
 interface Props {
   navBarIsOpen: boolean;
+  lightDividerActive: boolean;
+  toggleDivider: Function;
 }
 
 const HeroSection = (props: Props) => {
-  const { navBarIsOpen } = props;
+  const { navBarIsOpen, lightDividerActive, toggleDivider } = props;
+  const [hovered, setHovered] = useState<boolean>(false);
   const HandleResumeDownload = () => {
     fetch("/Stephen Bloodworth Resume.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -41,15 +44,41 @@ const HeroSection = (props: Props) => {
             </div>
           </span>
           <span id='desktop-hero-details' className='hidden md:inline'>
-            <p className='ml-auto mr-auto w-80 md:w-full pt-8 md:mt-4 md:p-2 text-flord text-lg md:text-xl font-sans animate-typing2 overflow-hidden inline-block whitespace-nowrap'>
-              I am <br/>an engineer <br/>specializing in building <br/>highly performant
-              applications that <br/>provide users with an
-              awesome experience.
+            <p className='ml-auto mr-auto w-80 md:w-full pt-8 md:mt-4 md:p-2 text-flord text-lg md:text-xl font-sans overflow-hidden inline-block whitespace-nowrap'>
+            <a href='#about'
+              onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
+              onClick={() => toggleDivider(true)}
+            >
+              <span className={`${lightDividerActive || hovered ? 'text-bismark' : 'text-other-blue'} animate-typing2`}>I am</span>
+            </a>
+            <span className='animate-typing2'>
+              <br/>an engineer <br/>specializing in building <br/>highly performant
+                applications that <br/>provide users with an
+                awesome experience.
+            </span>
             </p>
             <div className="relative flex items-center ">
-              <span className="animate-borderYFadeIn1 absolute left-0 bottom-0 h-0 w-0 border-l-1 border-blue-Dianne" />
-              <span className="xl:animate-borderYFadeIn2 absolute right-64 xl:right-[19.2rem] top-0 h-0 w-0 border-r-1 border-blue-Dianne " />
-              <div className="animate-borderXFadeIn1 left-0 top-0 h-0 border-t-1 border-blue-Dianne" />
+              <span className={`${
+                  lightDividerActive || hovered ?
+                  'transition-all duration-200 border-bismark rounded-xl border-l-1.5' :
+                  'transition-all duration-200 border-blue-Dianne border-l-1'
+                } cursor-pointer animate-borderYFadeIn1 absolute left-0 bottom-0 h-0 w-0`
+              }
+              onClick={() => toggleDivider(!lightDividerActive)}/>
+              <div className={`${
+                  lightDividerActive || hovered ?
+                  'transition-all duration-300 border-bismark rounded-xl border-t-1.5' :
+                  'transition-all duration-300 border-blue-Dianne border-t-1'
+                } cursor-pointer animate-borderXFadeIn1 left-0 top-0 h-0`
+              }
+              onClick={() => toggleDivider(!lightDividerActive)}/>
+              <span className={`${
+                  lightDividerActive || hovered ?
+                  'transition-all duration-500 border-bismark rounded-xl border-r-1.5' :
+                  'transition-all duration-500 border-blue-Dianne border-r-1'
+                } cursor-pointer xl:animate-borderYFadeIn2 absolute right-64 xl:right-[19.2rem] top-0 h-0 w-0`
+              }
+              onClick={() => toggleDivider(!lightDividerActive)}/>
             </div>
           </span>
           <button
