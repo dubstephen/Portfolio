@@ -20,12 +20,12 @@ export default function Home() {
   };
   return (
     <main className='h-fit !scroll-smooth '>
-      <NavBar navBarIsOpen={navBar} toggleNavBar={toggleNavBar} />
+      <NavBar navBarIsOpen={navBar} toggleNavBar={toggleNavBar} pageName="home"/>
       <span onClick={() => setNavBar(false)}>
         <HeroSection navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
         <AboutMe navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
         <PreviousJobs navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
-        {/* <PersonalProjects navBarIsOpen={navBar}/> */}
+        <PersonalProjects navBarIsOpen={navBar} lightDividerActive={lightDividerActive} toggleDivider={toggleDivider}/>
         <PreviousClientWork navBarIsOpen={navBar}/>
         <ContactMe navBarIsOpen={navBar}/>
       </span>

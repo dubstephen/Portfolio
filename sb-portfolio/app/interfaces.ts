@@ -1,3 +1,8 @@
+interface NavOption {
+  title: string;
+  link: string;
+}
+
 interface Technology {
   id: string;
   title: string;
@@ -5,9 +10,14 @@ interface Technology {
   link: string;
 }
 
-interface NavOption {
+interface PersonalProject {
+  id: string;
   title: string;
-  link: string;
+  description: string;
+  link?: string;
+  imageSRC?: string;
+  github?: string;
+  technologies: string[];
 }
 
 interface ClientCard {
