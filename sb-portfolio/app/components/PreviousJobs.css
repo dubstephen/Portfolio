@@ -1,3 +1,23 @@
 .previous-jobs{
   height: 40rem;
 }
+
+.job-resp li {
+position: relative;
+padding-bottom: 10px;
+}
+
+.job-resp {
+list-style: none;
+}
+
+.job-resp li:before{
+ content: '';
+ position: absolute;
+ border-right:2px solid #64ffda;
+ border-bottom:2px solid #64ffda;
+ width:10px;
+ height:10px;
+ left: -20px;
+ transform: translateY(-50%) rotate(-45deg);
+}
