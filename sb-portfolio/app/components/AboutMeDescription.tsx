@@ -46,9 +46,9 @@ const technologiesRow2: Technology[] = [
 ]
 const technologiesRow3: Technology[] = [
   {
-    title: '.NET',
-    imageSRC: '/Microsoft_.NET_logo.svg',
-    link: 'https://dotnet.microsoft.com/en-us/',
+    title: 'JavaScript',
+    imageSRC: '/logo-javascript.svg',
+    link: 'https://www.javascript.com/',
     id: '7'
   },
   {
