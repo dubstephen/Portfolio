@@ -46,7 +46,7 @@ const PreviousJobs = (props: Props) => {
                 <div className="flex items-center justify-start w-full">
                   <span className="text-cadet-blue text-xl md:text-2xl ml-4">Software Engineer</span>
                 </div>
-                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark text-xl md:text-2xl ml-4">@ Cypress Mill Co.</a>
+                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark underline text-xl md:text-2xl ml-4">@ Cypress Mill Co.</a>
               </div>
             </div>
             <div id='desktop-job-title' className="hidden md:flex items-center w-full">

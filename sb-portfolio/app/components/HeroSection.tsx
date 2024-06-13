@@ -32,14 +32,13 @@ const HeroSection = (props: Props) => {
           <h1 className='p-2 md:mt-4 name text-cadet-blue text-4xl md:text-7xl font-bold font-sans animate-fadeIn2'>Stephen <br className='md:hidden'/>Bloodworth.</h1>
           <h2 className='p-2 md:mt-4 what-i-do text-flord text-4xl md:text-7xl font-bold font-sans animate-fadeIn3'>I build software.</h2>
           <span id='modile-hero-details' className='md:hidden'>
-            <p className='ml-auto mr-auto w-80 md:w-full pt-4 md:mt-4 md:p-2 leading-9 text-flord text-lg md:text-xl font-sans animate-fadeIn3'>
-              I am <br/>an engineer <br/>specializing in building <br/>highly performant
-              applications <br/>that provide users with an
-              awesome 
+            <p className='ml-auto mr-auto w-80 md:w-full pl-8 pt-4 md:mt-4 md:p-2 leading-9 text-flord text-lg md:text-xl font-sans animate-fadeIn3 text-left'>
+              I am an engineer specializing <br/>in building highly performant
+              applications that provide users with an
+              awesome experience
             </p>
             <div className="relative flex items-center pt-2">
               <div className="animate-borderXFadeIn left-0 top-0 h-0 border-t-1 border-blue-Dianne"/>
-              <a href='#about' className="animate-fadeIn4 flex-shrink mx-4 text-bismark text-sm font-bold tracking-widest">EXPERIENCE</a>
               <div className="animate-borderXFadeIn bottom-0 right-0 h-0 w-0 border-b-1 ml-auto border-blue-Dianne"/>
             </div>
           </span>
