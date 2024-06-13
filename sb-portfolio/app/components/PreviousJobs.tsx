@@ -46,7 +46,7 @@ const PreviousJobs = (props: Props) => {
                 <div className="flex items-center justify-start w-full">
                   <span className="text-cadet-blue text-xl md:text-2xl ml-4">Software Engineer</span>
                 </div>
-                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark text-xl md:text-2xl ml-4">@ Cypress Mill Co.</a>
+                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark underline text-xl md:text-2xl ml-4">@ Cypress Mill Co.</a>
               </div>
             </div>
             <div id='desktop-job-title' className="hidden md:flex items-center w-full">
@@ -54,63 +54,36 @@ const PreviousJobs = (props: Props) => {
               <div className="flex items-center justify-start w-full">
                 <span className="text-cadet-blue text-xl md:text-2xl ml-6">Software Engineer</span>
                 <span className="text-bismark text-xl md:text-2xl md:ml-2 hidden md:inline">@</span>
-                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark text-xl md:text-2xl md:ml-2 hidden md:inline hover:underline"> Cypress Mill Co.</a>
+                <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark text-xl md:text-2xl md:ml-2 hidden md:inline underline"> Cypress Mill Co.</a>
               </div>
             </div>
             <div className="text-flord text-sm ml-6">April 2020 - April 2024</div>
           </h4>
           <div ref={ref} className="flex justify-start items-center w-full pt-6 md:ml-6 md:w-1/2 ">
-            <div className="h-24">
-              <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
-                  {'>'}
-                  <br className='min-[491px]:hidden min-[768px]:inline'/>
-                  <br className='min-[1512px]:hidden' />
-                  <br className='min-[390px]:hidden'/>
-                  <br className=''/>
-                </p>
-              </div>
-              <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
-                  {'>'}
-                  <br className='' />
-                  <br className='min-[1643px]:hidden'/>
-                  <br className='min-[412px]:hidden min-[768px]:inline'/>
-                  <br className='min-[1179px]:hidden'/>
-                  <br className='min-[360px]:hidden'/>
-                  <br className='min-[716px]:hidden min-[768px]:inline'/>
-                </p>
-              </div>
-              <div className="flex items-center justify-start w-full">
-                <p className='pt-8 md:p-2 text-bismark text-lg md:text-xl '>
-                  {'>'}<br/>
-                </p>
-              </div>
-            </div>
-            <div className="pl-2 h-24">
-              <div className="flex items-center justify-start w-full">
+            <ul className="pl-2 h-24 job-resp">
+              <li className="items-center justify-start w-full before:top-11 md:before:top-5">
                 <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
                   Wrote modern, performant, maintainable code for a diverse
                   array of client and internal projects
                 </p>
-              </div>
-              <div className="flex items-center justify-start w-full">
+              </li>
+              <li className="items-center justify-start w-full before:top-11 md:before:top-5">
                 <p className='pt-8 md:p-2 text-cadet-blue text-lg md:text-xl '>
                   Worked with a variety of different languages, platforms, and 
                   frameworks such as JavaScript, TypeScript, React,
-                  Django, Python, .NET, and more!
+                  Django, Python, and more!
                 </p>
-              </div>
-              <div className="flex items-center justify-start w-full">
+              </li>
+              <li className="items-center justify-start w-full before:top-11 md:before:top-5">
                 <p className='pt-8 md:p-2 md:pb-12 text-cadet-blue text-lg md:text-xl '>
                   Communicated with multi-disciplinary teams of engineers
                   and clients on a daily basis
                 </p>
-              </div>
+              </li>
               <div className="flex items-center justify-center 2xl:mr-36">
                 <LORModal />
               </div>
-            </div>
+            </ul>
           </div>
         </div>
       </div>

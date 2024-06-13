@@ -34,7 +34,7 @@ const NavBar = (props: Props) => {
   const navStyles = navBarIsOpen ? `max-md:bg-black-pearl max-md:rounded-s-md max-md:border-blue-Dianne max-md:border-l-1 border-t-1 max-md:right-0 w-3/4`: `max-md:-right-80`;
   return (
     <>
-      <nav className="bg-black-pearl fixed top-0 left-0 right-0 z-10 font-mono md:h-24 md:bg-opacity-60 md:backdrop-blur-md">
+      <nav className="bg-black-pearl fixed top-0 left-0 right-0 z-10 font-mono md:h-24 bg-opacity-60 backdrop-blur-md">
         <div className="justify-between pt-2 pb-1 px-4 mx-auto lg:max-w-7x1 md:items-center md:flex">
           <div onClick={navBarIsOpen ? () => toggleNavBar(false) : undefined}>
             <div className="flex">

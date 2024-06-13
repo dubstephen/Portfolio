@@ -13,6 +13,13 @@ const config: Config = {
     fontFamily: {
       'mono': ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
     },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     extend: {
       animation: {
         typing: 'typing 0.5s steps(30), blink 1s infinite',
@@ -108,7 +115,7 @@ const config: Config = {
             'background-color': 'transparent'
           },
           to: {
-            'backgroun-color': 'bismark'
+            'background-color': 'bismark'
           },
         },
       }),

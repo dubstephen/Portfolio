@@ -15,7 +15,7 @@ const TechRow = (props: Props) => {
         { hovered ? 
           <span className={'text-bismark underline pl-4 hidden md:inline'}>{tech.title}</span>
         :  
-          <span className={'text-cadet-blue pl-4 hidden md:inline'}>{tech.title}</span>
+          <span className={'text-other-blue underline pl-4 hidden md:inline'}>{tech.title}</span>
         }
       </a>
   );

@@ -25,7 +25,7 @@ const ClientCardComponent = (props: Props) => {
           <p className='text-cadet-blue text-base'>{client.description}</p>
       </div>
       { client.link &&
-        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline ml-6 w-24">Learn More</a>
+        <a href={client.link} target="_blank" rel="noopener noreferrer" className="text-other-blue hover:text-bismark underline ml-6 w-24">Learn More</a>
       }
       <div id={'client-card-'+client.id} className="px-6 py-4 align-bottom pt-auto mb-0">
         { client.technologies.map((tech, index) => {

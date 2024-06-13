@@ -46,9 +46,9 @@ const technologiesRow2: Technology[] = [
 ]
 const technologiesRow3: Technology[] = [
   {
-    title: '.NET',
-    imageSRC: '/Microsoft_.NET_logo.svg',
-    link: 'https://dotnet.microsoft.com/en-us/',
+    title: 'JavaScript',
+    imageSRC: '/logo-javascript.svg',
+    link: 'https://www.javascript.com/',
     id: '7'
   },
   {
@@ -100,8 +100,8 @@ const AboutMeDescription = () => {
           </div>
           <div id='mobile-about-me-desc' className='md:hidden'>
             <div className="flex w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
-                Hello, my name is Stephen <br/>and I love building software!
+              <p className='pt-8 md:p-2 text-flord text-lg text-left '>
+                Hello, my name is Stephen and I love building software!
                 My interest in software development started in the early
                 stages of my adult life, but I never thought I would be
                 able to truly pursue it. It was not until spring of 2019 that
@@ -110,22 +110,22 @@ const AboutMeDescription = () => {
               </p>
             </div>
             <div className="flex w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
+              <p className='pt-8 md:p-2 text-flord text-lg text-left '>
                 I spent the next year learning everything I could in order
                 to launch my new career off the ground. I managed to
-                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software consulting firm</a>{' '}
+                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark underline">a software consulting firm</a>{' '}
                 based out of Florence, AL. They took
                 me in and trained me on everything from front to
                 back and beyond.
               </p>
             </div>
             <div className="flex w-full">
-              <p className='pt-8 md:p-2 text-flord text-lg text-center '>
+              <p className='pt-8 md:p-2 text-flord text-lg'>
                 While working there I had many opurtunities to get
                 my hands on a wide variety of technologies.<br/><br/>
-                <span className='text-cadet-blue text-lg text-center'>Here are just a few of my favorites:</span>
               </p>
             </div>
+            <p className='text-cadet-blue text-lg text-center'>Here are just a few of my favorites:</p>
           </div>
           <div id='desktop-about-me-desc' className='hidden md:inline'>
             <div className="flex items-center justify-start w-full">
@@ -142,7 +142,7 @@ const AboutMeDescription = () => {
               <p className='pt-8 md:p-2 text-flord text-lg md:text-lg '>
                 I spent the next year learning everything I could in order<br/>
                 to launch my new career off the ground. I managed to<br/>
-                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-bismark hover:underline">a software<br/> consulting firm</a>{' '}
+                stumble upon an amazing team of engineers at <a href='https://cypressmill.co/' target="_blank" rel="noopener noreferrer" className="text-other-blue hover:text-bismark underline">a software<br/> consulting firm</a>{' '}
                 based out of Florence, AL. They took<br/>
                 me in and trained me on everything from front to<br/>
                 back and beyond.
