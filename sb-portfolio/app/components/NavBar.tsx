@@ -1,36 +1,22 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { portNavOptions, dvNavOptions } from '../constants';
 
 interface Props {
   navBarIsOpen: boolean;
   toggleNavBar: Function;
+  pageName: string;
+}
+
+const navOptionSets = {
+  'home': portNavOptions,
+  'dv': dvNavOptions
 }
 
 const NavBar = (props: Props) => {
-  const { navBarIsOpen, toggleNavBar } = props;
-  const navOptions: NavOption[] = [
-    {
-      title: 'About',
-      link: '#about'
-    },
-    {
-      title: 'Employment',
-      link: '#previous-jobs'
-    },
-    // {
-    //   title: 'Work',
-    //   link: '#personal-projects'
-    // },
-    {
-      title: 'Work',
-      link: '#previous-client-work'
-    },
-    {
-      title: 'Contact',
-      link: '#contact-me'
-    },
-  ]
+  const { navBarIsOpen, toggleNavBar, pageName } = props;
+  const navOptions = navOptionSets[pageName];
   const navStyles = navBarIsOpen ? `max-md:bg-black-pearl max-md:rounded-s-md max-md:border-blue-Dianne max-md:border-l-1 border-t-1 max-md:right-0 w-3/4`: `max-md:-right-80`;
   return (
     <>

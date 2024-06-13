@@ -2,6 +2,10 @@
   height: -webkit-fill-available;
 }
 
+.lor-button {
+  box-shadow: 0 0 0 0 #64ffda;
+}
+
 .lor-button:hover {
   box-shadow: 0.3em 0.3em 0 0 #64ffda;
 }

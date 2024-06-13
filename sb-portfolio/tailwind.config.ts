@@ -14,6 +14,9 @@ const config: Config = {
       'mono': ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
     },
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/Profile Pic.jpg')",
+      },
       animation: {
         typing: 'typing 0.5s steps(30), blink 1s infinite',
         typing2: 'typing2 3s steps(50)',
