@@ -125,7 +125,7 @@ const AboutMeDescription = () => {
                 my hands on a wide variety of technologies.<br/><br/>
               </p>
             </div>
-            <p className='text-cadet-blue text-lg text-center'>Here are just a few of my favorites:</p>
+            <span className='text-cadet-blue text-lg'>Here are just a few of my favorites:</span>
           </div>
           <div id='desktop-about-me-desc' className='hidden md:inline'>
             <div className="flex items-center justify-start w-full">
@@ -156,12 +156,12 @@ const AboutMeDescription = () => {
               </p>
             </div>
           </div>
-          <div className=" pt-8">
-            <div className="w-full columns-3 flex justify-center">
+          <div className="pt-8">
+            <div className="w-full columns-3 flex">
               <div className="">
                 { technologiesRow1.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='mr-8 md:mx-6 mb-12'>
+                    <div key={'tech-item-'+tech.id} className='mr-12 md:ml-2 md:mr-6 mb-16'>
                       <TechRow tech={tech} />
                     </div>
                   )
@@ -170,7 +170,7 @@ const AboutMeDescription = () => {
               <div className="">
                 { technologiesRow2.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='mx-8 md:mx-6 mb-12'>
+                    <div key={'tech-item-'+tech.id} className='mx-12 md:mx-6 mb-16'>
                       <TechRow tech={tech} />
                     </div>
                   )
@@ -179,7 +179,7 @@ const AboutMeDescription = () => {
               <div className="">
                 { technologiesRow3.map((tech) => {
                   return (
-                    <div key={'tech-item-'+tech.id} className='ml-8 md:mx-6 mb-12'>
+                    <div key={'tech-item-'+tech.id} className='ml-8 md:mx-6 mb-16'>
                       <TechRow tech={tech} />
                     </div>
                   )

@@ -21,21 +21,21 @@ const clientCardRow1: ClientCard[] = [
   },
   {
     id: '2',
-    title: 'Rapid Emergency Notification Tool',
-    description: 'Collaborated with engineers to develop a rapid emergency notification tool to be \
-    utilized by schools. I implemented multiple features on this tool including geo-fencing and positioning.',
-    link: 'https://cypressmill.co/project-showcase/nside/',
-    technologies: ['Xamarin', 'C#'],
+    title: 'Charity Management Tool',
+    description: 'Built out new features for an online case management tool used for reducing waste \
+    and helping organizations accurately allocate their funds to those in need.',
+    link: 'https://cypressmill.co/project-showcase/simon-solutions/',
+    technologies: ['Django', 'Python', 'Python Templates'],
   },
 ]
 const clientCardRow2: ClientCard[] = [
   {
     id: '3',
-    title: 'Case Management Platform',
-    description: 'Built out new features for an online case management tool used for reducing waste \
-    and helping organizations accurately allocate their funds to those in need.',
-    link: 'https://cypressmill.co/project-showcase/simon-solutions/',
-    technologies: ['Django', 'Python', 'Python Templates'],
+    title: 'Rapid Emergency Notification Tool',
+    description: 'Collaborated with engineers to develop a rapid emergency notification tool to be \
+    utilized by schools. I implemented multiple features on this tool including geo-fencing and positioning.',
+    link: 'https://cypressmill.co/project-showcase/nside/',
+    technologies: ['Xamarin', 'C#'],
   },
   {
     id: '4',
